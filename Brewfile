@@ -1,4 +1,5 @@
-tap "caskroom/cask"
+tap 'caskroom/cask'
+tap 'caskroom/fonts'
 tap 'homebrew/homebrew-php'
 
 cask_args appdir: '~/Applications'
@@ -48,6 +49,7 @@ brew 'watchman'
 cask 'xquartz'
 cask 'atom'
 cask 'flux'
+cask 'font-fira-code'
 cask 'google-chrome'
 cask 'iterm2'
 cask 'steam'
