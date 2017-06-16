@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# 
+# Stolen from holman's dotfiles:
+# https://github.com/holman/dotfiles/blob/8d4881a5adec944b3a8dea1e769a3cbdd7e7bbb6/script/install
+
+set -e
+
+cd "$(dirname $0)"/..
+
+DOTFILES_ROOT=$(pwd -P)
+
+if [ ! -d .oh-my-zsh ]; then
+  echo "› Grabbing oh-my-zsh, if it's not already there"
+  export ZSH=$DOTFILES_ROOT;
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
+
+echo "› Linking the Brewfile"
+if [ ! -e $HOME/.Brewfile ]; then
+  ln -s $DOTFILES_ROOT/Brewfile $HOME/.Brewfile
+fi
+
+find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
