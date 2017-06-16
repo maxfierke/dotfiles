@@ -1,4 +1,5 @@
 tap "caskroom/cask"
+tap 'homebrew/homebrew-php'
 
 cask_args appdir: '~/Applications'
 
