@@ -47,6 +47,7 @@ brew 'watchman'
 # Desktop apps
 cask 'xquartz'
 cask 'atom'
+cask 'flux'
 cask 'google-chrome'
 cask 'iterm2'
 cask 'steam'
