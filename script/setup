@@ -7,16 +7,22 @@ set -e
 
 cd "$(dirname $0)"/..
 
-DOTFILES_ROOT=$(pwd -P)
+export DOTFILES_ROOT=$(pwd -P)
+export ZSH="$DOTFILES_ROOT/vendor/.oh-my-zsh"
+export ZSH_CUSTOM="$DOTFILES_ROOT/zsh/oh-my-zsh"
 
-if [ ! -d .oh-my-zsh ]; then
+if ! [ -d "$ZSH" ]; then
   echo "› Grabbing oh-my-zsh, if it's not already there"
-  export ZSH=$DOTFILES_ROOT/.oh-my-zsh;
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
 echo "› Linking the Brewfile"
-if [ ! -e $HOME/.Brewfile ]; then
+if ! [ -L $HOME/.zshrc ]; then
+  ln -s $DOTFILES_ROOT/zsh/zshrc $HOME/.zshrc
+fi
+
+echo "› Linking the Brewfile"
+if ! [ -e $HOME/.Brewfile ]; then
   ln -s $DOTFILES_ROOT/Brewfile $HOME/.Brewfile
 fi
 
