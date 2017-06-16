@@ -11,7 +11,7 @@ DOTFILES_ROOT=$(pwd -P)
 
 if [ ! -d .oh-my-zsh ]; then
   echo "› Grabbing oh-my-zsh, if it's not already there"
-  export ZSH=$DOTFILES_ROOT;
+  export ZSH=$DOTFILES_ROOT/.oh-my-zsh;
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
