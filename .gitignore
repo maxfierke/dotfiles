@@ -1,1 +1,2 @@
-vendor/.oh-my-zsh
+.DS_Store
+vendor/
