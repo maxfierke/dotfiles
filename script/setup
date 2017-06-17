@@ -11,19 +11,24 @@ export DOTFILES_ROOT=$(pwd -P)
 export ZSH="$DOTFILES_ROOT/vendor/.oh-my-zsh"
 export ZSH_CUSTOM="$DOTFILES_ROOT/zsh/oh-my-zsh"
 
+source $DOTFILES_ROOT/util/common.sh
+
 if [ ! -d "$ZSH" ]; then
-  echo "› Grabbing oh-my-zsh, if it's not already there"
+  step "Grabbing oh-my-zsh, if it's not already there"
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
-echo "› Linking the zshrc"
-if ! [ -L $HOME/.zshrc ]; then
+if [ ! -L $HOME/.zshrc ]; then
+  step "Linking the zshrc"
   ln -sf $DOTFILES_ROOT/zsh/zshrc $HOME/.zshrc
 fi
 
-echo "› Linking the Brewfile"
 if [ ! -L $HOME/.Brewfile ]; then
+  step "Linking the Brewfile"
   ln -sf $DOTFILES_ROOT/Brewfile $HOME/.Brewfile
 fi
+
+step 'Ensuring Brew dependencies are up-to-date'
+brew bundle --file=$DOTFILES_ROOT/Brewfile check || brew bundle --file=$DOTFILES_ROOT/Brewfile install
 
 find . -name install.sh -not -path "./vendor/*"  | while read installer ; do sh -c "${installer}" ; done
