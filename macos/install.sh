@@ -8,7 +8,21 @@
 set -e
 source $DOTFILES_ROOT/util/common.sh
 
+if [ "$(uname -s)" != "Darwin" ]; then
+    exit
+fi
+
 step 'Setting some nice defaults'
+
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until we're done here
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
