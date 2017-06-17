@@ -1,6 +1,7 @@
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
 tap 'homebrew/homebrew-php'
+tap 'neovim/neovim'
 
 cask_args appdir: '~/Applications'
 
@@ -41,7 +42,7 @@ brew 'redis', restart_service: :changed
 brew 'yarn'
 
 # Development schtuff
-brew 'macvim'
+brew 'neovim'
 brew 'forego'
 brew 'watchman'
 
