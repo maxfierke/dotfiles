@@ -27,6 +27,7 @@ brew 'wget'
 # Language runtimes/compilers/version managers
 brew 'crystal-lang', args: ['with-llvm']
 brew 'php56' # :pppppppppppp
+brew 'php56-intl'
 brew 'pyenv'
 brew 'rbenv'
 brew 'nodenv'
@@ -39,6 +40,7 @@ brew 'postgresql', restart_service: :changed
 brew 'redis', restart_service: :changed
 
 # Package managers
+brew 'composer'
 brew 'yarn'
 
 # Development schtuff
