@@ -25,7 +25,7 @@ brew 'readline'
 brew 'wget'
 
 # Language runtimes/compilers/version managers
-brew 'crystal', args: ['with-llvm']
+brew 'crystal-lang', args: ['with-llvm']
 brew 'php56' # :pppppppppppp
 brew 'pyenv'
 brew 'rbenv'
