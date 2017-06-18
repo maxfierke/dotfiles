@@ -5,4 +5,5 @@ alias ect="ember test -s --launch Chrome"
 alias got=git
 alias fix_enter="stty sane"
 alias fix_webcam="sudo killall VDCAssistant"
+alias maps="telnet mapscii.me"
 alias vim="nvim"
