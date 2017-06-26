@@ -36,7 +36,7 @@ brew 'elixir'
 # Services
 brew 'nginx', restart_service: :changed
 brew 'mysql@5.6', restart_service: :changed
-brew 'postgresql', restart_service: :changed
+brew 'postgresql', restart_service: :changed unless system('brew ls --versions postgresql@9.4 > /dev/null')
 brew 'redis', restart_service: :changed
 
 # Package managers
@@ -52,7 +52,7 @@ brew 'watchman'
 cask 'xquartz'
 cask 'atom'
 cask 'flux'
-cask 'font-fira-code'
+cask 'font-fira-code' unless File.exist?(File.expand_path('~/Library/Fonts/FiraCode-Bold.otf'))
 cask 'google-chrome'
 cask 'insomnia'
 cask 'iterm2'
