@@ -1,6 +1,10 @@
 alias be="bundle exec"
-alias bake="bundle exec bake"
+alias bake="bundle exec rake"
+alias cuke="bundle exec cucumber"
+alias reload_shell="exec -l $SHELL"
+alias resolve_merge_conflicts="git diff --name-only --diff-filter=U | xargs code"
 alias respek="bundle exec rspec"
+alias rmc="resolve_merge_conflicts"
 alias ect="ember test -s --launch Chrome"
 alias got=git
 alias fix_enter="stty sane"
