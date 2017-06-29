@@ -10,5 +10,5 @@ install_python_versions() {
     done
 }
 
-install_python_versions "$HOME/infrastructure"
-install_python_versions "$HOME/src"
+[ -d "$HOME/infrastructure" ] && install_python_versions "$HOME/infrastructure"
+[ -d "$HOME/src" ] && install_python_versions "$HOME/src"
