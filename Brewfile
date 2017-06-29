@@ -28,6 +28,10 @@ brew 'wget'
 brew 'crystal-lang', args: ['with-llvm']
 brew 'php56' # :pppppppppppp
 brew 'php56-intl'
+brew 'php56-mcrypt'
+brew 'php56-xdebug'
+brew 'php56-opcache'
+brew 'php56-gmp'
 brew 'pyenv'
 brew 'rbenv'
 brew 'nodenv'
