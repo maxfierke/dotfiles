@@ -75,7 +75,7 @@ fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Aliases
+[ -f $HOME/.dotfiles/zsh/env.sh ] && source $HOME/.dotfiles/zsh/env.sh
 [ -f $HOME/.dotfiles/zsh/aliases.sh ] && source $HOME/.dotfiles/zsh/aliases.sh
 
 # Theme stuff
