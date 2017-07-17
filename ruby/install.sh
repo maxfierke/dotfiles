@@ -15,6 +15,8 @@ install_ruby_versions() {
         rbenv shell $version
         rbenv rehash
         gem install bundler
+        gem install debase
+        gem install ruby-debug-ide
         rbenv shell -
     done
 }

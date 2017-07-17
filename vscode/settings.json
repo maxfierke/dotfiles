@@ -1,0 +1,51 @@
+{
+    "editor.fontFamily": "FiraCode-Retina, 'Fira Code'",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true,
+    "editor.renderWhitespace": "all",
+    "editor.tabSize": 2,
+    "editor.rulers": [
+        80
+    ],
+    "editor.renderIndentGuides": true,
+    "editor.renderControlCharacters": true,
+    "editor.renderLineHighlight": "all",
+    "editor.formatOnSave": false,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontLigatures": true,
+    "explorer.openEditors.visible": 0,
+    "explorer.autoReveal": false,
+    "workbench.colorTheme": "Solarized Dark",
+    "editor.cursorBlinking": "solid",
+    "window.nativeTabs": true,
+    "workbench.editor.swipeToNavigate": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/tmp/**": true,
+        "**/dist/**": true,
+        "**/node_modules/**": true,
+        "**/bower_components/**": true
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/tmp/**": true,
+        "**/dist/**": true,
+        "**/node_modules/**": true,
+        "**/bower_components/**": true
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorCustomizations": {
+        "activityBarBadge.background": "#5C6BC0",
+        "list.activeSelectionForeground": "#5C6BC0",
+        "list.inactiveSelectionForeground": "#5C6BC0",
+        "list.highlightForeground": "#5C6BC0",
+        "scrollbarSlider.activeBackground": "#5C6BC050",
+        "editorSuggestWidget.highlightForeground": "#5C6BC0",
+        "textLink.foreground": "#5C6BC0"
+    },
+    "materialTheme.cache.workbench.accent": "Indigo"
+}
