@@ -11,3 +11,12 @@ alias fix_enter="stty sane"
 alias fix_webcam="sudo killall VDCAssistant"
 alias maps="telnet mapscii.me"
 alias vim="nvim"
+
+respawn_rabbitmq() {
+  until rabbitmqctl cluster_status; do
+    brew services restart rabbitmq
+    sleep 5
+  done
+
+  echo 'Success!'
+}
