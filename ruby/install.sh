@@ -3,6 +3,9 @@
 set -e
 source $DOTFILES_ROOT/util/common.sh
 
+# Don't worry about it :p
+[ ! -z "$CHIRPSTRAPPED" ] || exit
+
 eval "$(rbenv init -)"
 
 install_ruby_versions() {
