@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # Ensure createdb exists, or exit otherwise
 command -v createdb >/dev/null 2>&1 || exit
 

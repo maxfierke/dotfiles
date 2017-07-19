@@ -4,7 +4,9 @@ set -e
 source $DOTFILES_ROOT/util/common.sh
 
 # Don't worry about it :p
-[ ! -z "$CHIRPSTRAPPED" ] || exit
+[ ! -z "$CHIRPSTRAPPED" ] && exit
+
+eval "$(pyenv init -)"
 
 install_python_versions() {
     for version in $(find $1 -name .python-version -maxdepth 2 | xargs cat | sort | uniq); do

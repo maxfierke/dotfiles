@@ -1,9 +1,7 @@
-#!/usr/bin/env bash
-# 
+#!/bin/zsh
+#
 # Stolen from holman's dotfiles:
 # https://github.com/holman/dotfiles/blob/8d4881a5adec944b3a8dea1e769a3cbdd7e7bbb6/script/install
-
-set -e
 
 cd "$(dirname $0)"/..
 
@@ -27,6 +25,8 @@ if [ ! -L $HOME/.Brewfile ]; then
   step "Linking the Brewfile"
   ln -sf $DOTFILES_ROOT/Brewfile $HOME/.Brewfile
 fi
+
+source $HOME/.zshrc
 
 step 'Ensuring Brew dependencies are up-to-date'
 brew bundle --file=$DOTFILES_ROOT/Brewfile check || brew bundle --file=$DOTFILES_ROOT/Brewfile install
