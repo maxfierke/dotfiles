@@ -4,7 +4,7 @@
 export RBENV_ROOT=/usr/local/opt/rbenv
 export NODENV_ROOT=/usr/local/opt/nodenv
 export PYENV_ROOT=/usr/local/opt/pyenv
-export PATH="$RBENV_ROOT/bin:$NODENV_ROOT/bin:$PYENV_ROOT/bin:$PATH"
+export PATH="$RBENV_ROOT/bin:$NODENV_ROOT/bin:$PYENV_ROOT/bin:/usr/local/sbin:$PATH"
 
 if command -v rbenv >/dev/null 2>&1; then eval "$(rbenv init -)"; fi
 if command -v nodenv >/dev/null 2>&1; then eval "$(nodenv init -)"; fi
