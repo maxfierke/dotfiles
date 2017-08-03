@@ -16,5 +16,5 @@ fi
 
 step "Installing Powerline fonts"
 cd $PL_FONTS_DIR
-./install.sh
+./install.sh || true
 
