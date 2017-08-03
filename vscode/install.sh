@@ -7,6 +7,7 @@ source $DOTFILES_ROOT/util/common.sh
 command -v code >/dev/null 2>&1 || exit
 
 # Symlink the settings file
+mkdir -p "$HOME/Library/Application Support/Code/User"
 ln -sfv "$DOTFILES_ROOT/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 
 VSCODE_PACKAGES=(
