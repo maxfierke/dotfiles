@@ -18,6 +18,7 @@ VSCODE_PACKAGES=(
   msjsdiag.debugger-for-chrome
   EditorConfig.editorconfig
   sbrink.elm
+  emberjs.emberjs
   codezombiech.gitignore
   tberman.json-schema-validator
   PKief.material-icon-theme
@@ -29,9 +30,7 @@ VSCODE_PACKAGES=(
   whatwedo.twig
   mjmcloug.vscode-elixir
   dbaeumer.vscode-eslint
-  felixrieseberg.vsc-ember-cli
   Equinusocio.vsc-material-theme
-  emberjs.vscode-ember
 )
 
 for package in "${VSCODE_PACKAGES[@]}"; do
