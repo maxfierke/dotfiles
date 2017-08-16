@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export DOTFILES_ROOT="$HOME/.dotfiles"
+
 # Ensure Homebrew rbenv/nodeenv/pyenv are setup correctly
 export RBENV_ROOT=/usr/local/opt/rbenv
 export NODENV_ROOT=/usr/local/opt/nodenv
