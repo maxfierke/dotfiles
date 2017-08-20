@@ -75,6 +75,9 @@ fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+# GPG tty passphrase
+export GPG_TTY=$(tty)
+
 [ -f $HOME/.dotfiles/zsh/env.sh ] && source $HOME/.dotfiles/zsh/env.sh
 [ -f $HOME/.dotfiles/zsh/aliases.sh ] && source $HOME/.dotfiles/zsh/aliases.sh
 
