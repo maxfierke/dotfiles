@@ -16,7 +16,7 @@ VSCODE_PACKAGES=(
   kofno.crystal-ide
   stevejpurves.cucumber
   msjsdiag.debugger-for-chrome
-  EditorConfig.editorconfig
+  EditorConfig.EditorConfig
   sbrink.elm
   emberjs.emberjs
   codezombiech.gitignore
@@ -24,9 +24,9 @@ VSCODE_PACKAGES=(
   PKief.material-icon-theme
   zhuangtongfa.Material-theme
   felixfbecker.php-pack
-  ricard.postcss
+  ricard.PostCSS
   mohsen1.prettify-json
-  rebornix.ruby
+  rebornix.Ruby
   shardulm94.trailing-spaces
   whatwedo.twig
   mjmcloug.vscode-elixir
@@ -34,7 +34,13 @@ VSCODE_PACKAGES=(
   Equinusocio.vsc-material-theme
 )
 
+INSTALLED_PACKAGES=( $(code --list-extensions) )
+
 for package in "${VSCODE_PACKAGES[@]}"; do
   step "Installing vscode extension: '$package'"
-  code --install-extension $package
+  if [[ ! " ${INSTALLED_PACKAGES[@]} " =~ " ${package} " ]]; then
+    code --install-extension $package
+  else
+    echo "Already installed $package"
+  fi
 done
