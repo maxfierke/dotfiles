@@ -22,6 +22,7 @@ VSCODE_PACKAGES=(
   codezombiech.gitignore
   tberman.json-schema-validator
   PKief.material-icon-theme
+  zhuangtongfa.Material-theme
   felixfbecker.php-pack
   ricard.postcss
   mohsen1.prettify-json
