@@ -20,6 +20,7 @@ VSCODE_PACKAGES=(
   sbrink.elm
   emberjs.emberjs
   codezombiech.gitignore
+  eamodio.gitlens
   tberman.json-schema-validator
   PKief.material-icon-theme
   zhuangtongfa.Material-theme
