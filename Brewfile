@@ -26,6 +26,7 @@ brew 'openssl'
 brew 'pkg-config'
 brew 'readline'
 brew 'wget'
+brew 'youtube-dl'
 
 # Language runtimes/compilers/version managers
 brew 'crystal-lang', args: ['with-llvm']
