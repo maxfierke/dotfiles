@@ -27,6 +27,7 @@ brew 'pkg-config'
 brew 'readline'
 brew 'wget'
 brew 'youtube-dl'
+brew 'zlib'
 
 # Language runtimes/compilers/version managers
 brew 'crystal-lang', args: ['with-llvm']
@@ -61,6 +62,7 @@ cask 'xquartz'
 cask 'atom'
 cask 'flux'
 cask 'font-fira-code' unless File.exist?(File.expand_path('~/Library/Fonts/FiraCode-Bold.otf'))
+cask 'docker'
 cask 'google-chrome'
 cask 'gpgtools'
 cask 'insomnia'
