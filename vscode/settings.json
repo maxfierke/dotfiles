@@ -37,6 +37,9 @@
         "**/node_modules/**": true,
         "**/bower_components/**": true
     },
+    "files.associations": {
+        "*.fdoc": "yaml"
+    },
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorCustomizations": {
         "activityBarBadge.background": "#5C6BC0",
