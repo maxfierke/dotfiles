@@ -11,6 +11,7 @@ mkdir -p "$HOME/Library/Application Support/Code/User"
 ln -sfv "$DOTFILES_ROOT/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 
 VSCODE_PACKAGES=(
+  haaaad.ansible
   ms-vscode.cpptools
   g3ortega.crystal
   kofno.crystal-ide
