@@ -20,3 +20,9 @@ respawn_rabbitmq() {
 
   echo 'Success!'
 }
+
+purge_dns_cache() {
+  sudo killall -HUP mDNSResponder
+  sudo killall mDNSResponderHelper
+  sudo dscacheutil -flushcache
+}
