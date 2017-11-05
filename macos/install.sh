@@ -103,8 +103,7 @@ defaults write com.apple.terminal SecureKeyboardEntry -bool true
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
 
-# Broadcast the truth
-defaults -currentHost write com.apple.screensaver.Basic MESSAGE "Idaho Doesn't Exist"
+defaults -currentHost write com.apple.screensaver.Basic MESSAGE "🤔🤔🤔🤔🤔"
 
 killall cfprefsd
 
