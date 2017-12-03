@@ -28,11 +28,14 @@ VSCODE_PACKAGES=(
   felixfbecker.php-pack
   ricard.PostCSS
   mohsen1.prettify-json
+  esbenp.prettier-vscode
   rebornix.Ruby
   shardulm94.trailing-spaces
+  eg2.tslint
   whatwedo.twig
   mjmcloug.vscode-elixir
   dbaeumer.vscode-eslint
+  DSKWRK.vscode-generate-getter-setter
   Equinusocio.vsc-material-theme
 )
 
