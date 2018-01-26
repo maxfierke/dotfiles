@@ -7,3 +7,5 @@ if [ ! -e "$HOME/.SpaceVim.d" ]; then
     step 'Installing spacevim for neovim'
     curl -sLf https://spacevim.org/install.sh | bash -s -- install neovim
 fi
+
+pip3 install -U neovim

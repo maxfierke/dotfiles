@@ -17,6 +17,10 @@ install_python_versions() {
     for version in $(find $1 -name .python-version -maxdepth 2 | xargs cat | sort | uniq); do
         step "Installing python version $version"
         pyenv install --skip-existing $version
+        pyenv shell $version
+        pyenv rehash
+        pip install ansible
+        pip install neovim
     done
 }
 
