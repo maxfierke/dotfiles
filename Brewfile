@@ -65,7 +65,7 @@ cask 'flux'
 cask 'font-fira-code' unless File.exist?(File.expand_path('~/Library/Fonts/FiraCode-Bold.otf'))
 cask 'docker'
 cask 'google-chrome'
-cask 'gpgtools'
+cask 'gpg-suite'
 cask 'insomnia'
 cask 'iterm2'
 cask 'mysqlworkbench'
