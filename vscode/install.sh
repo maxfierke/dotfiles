@@ -6,9 +6,15 @@ source $DOTFILES_ROOT/util/common.sh
 # Ensure code exists, or exit otherwise
 command -v code >/dev/null 2>&1 || exit
 
+if [ "$(uname -s)" == "Darwin" ]; then
+  CODE_USER_DIR="$HOME/Library/Application Support/Code/User"
+elif [ "$(uname -s)" == "Linux" ]; then
+  CODE_USER_DIR="$HOME/.config/Code/User"
+fi
+
 # Symlink the settings file
-mkdir -p "$HOME/Library/Application Support/Code/User"
-ln -sfv "$DOTFILES_ROOT/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+mkdir -p "$CODE_USER_DIR"
+ln -sfv "$DOTFILES_ROOT/vscode/settings.json" "$CODE_USER_DIR/settings.json"
 
 VSCODE_PACKAGES=(
   haaaad.ansible
