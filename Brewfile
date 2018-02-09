@@ -17,7 +17,7 @@ brew 'git'
 brew 'gnu-sed'
 brew 'gnu-tar'
 brew 'gnupg'
-brew 'heroku'
+brew 'heroku' if `uname -s`.chomp == 'Darwin'
 brew 'hub'
 brew 'imagemagick'
 brew 'jq'
@@ -32,12 +32,16 @@ brew 'zlib'
 
 # Language runtimes/compilers/version managers
 brew 'crystal-lang', args: ['with-llvm']
-brew 'php56' # :pppppppppppp
-brew 'php56-intl'
-brew 'php56-mcrypt'
-brew 'php56-xdebug'
-brew 'php56-opcache'
-brew 'php56-gmp'
+
+if `uname -s`.chomp == 'Darwin'
+  brew 'php56'
+  brew 'php56-intl'
+  brew 'php56-mcrypt'
+  brew 'php56-xdebug'
+  brew 'php56-opcache'
+  brew 'php56-gmp'
+end
+
 brew 'pyenv'
 brew 'rbenv'
 brew 'nodenv'
