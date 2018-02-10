@@ -45,7 +45,7 @@ end
 brew 'pyenv'
 brew 'rbenv'
 brew 'nodenv'
-brew 'elixir'
+brew 'elixir' if `uname -s`.chomp == 'Darwin' # elixir from linuxbrew is reeeeeeallllly slow for some reason
 
 # Services
 brew 'nginx', restart_service: :changed
@@ -62,22 +62,25 @@ brew 'neovim'
 brew 'forego'
 brew 'watchman'
 
-# Desktop apps
-cask 'xquartz'
-cask 'atom'
-cask 'flux'
-cask 'font-fira-code' unless File.exist?(File.expand_path('~/Library/Fonts/FiraCode-Bold.otf'))
-cask 'docker'
-cask 'google-chrome'
-cask 'gpg-suite'
-cask 'insomnia'
-cask 'iterm2'
-cask 'mysqlworkbench'
-cask 'postico'
-cask 'sequel-pro'
-cask 'slack'
-cask 'steam'
-cask 'tidal'
-cask 'tunnelblick'
-cask 'visual-studio-code'
-cask 'vlc'
+
+if `uname -s`.chomp == 'Darwin'
+  # Desktop apps
+  cask 'xquartz'
+  cask 'atom'
+  cask 'flux'
+  cask 'font-fira-code' unless File.exist?(File.expand_path('~/Library/Fonts/FiraCode-Bold.otf'))
+  cask 'docker'
+  cask 'google-chrome'
+  cask 'gpg-suite'
+  cask 'insomnia'
+  cask 'iterm2'
+  cask 'mysqlworkbench'
+  cask 'postico'
+  cask 'sequel-pro'
+  cask 'slack'
+  cask 'steam'
+  cask 'tidal'
+  cask 'tunnelblick'
+  cask 'visual-studio-code'
+  cask 'vlc'
+end
