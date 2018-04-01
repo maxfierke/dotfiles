@@ -36,6 +36,7 @@ VSCODE_PACKAGES=(
   mohsen1.prettify-json
   esbenp.prettier-vscode
   rebornix.Ruby
+  rust-lang.rust
   shardulm94.trailing-spaces
   eg2.tslint
   whatwedo.twig
