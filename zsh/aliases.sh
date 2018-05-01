@@ -26,3 +26,21 @@ purge_dns_cache() {
   sudo killall mDNSResponderHelper
   sudo dscacheutil -flushcache
 }
+
+list_project_node_versions() {
+  for file in $(find $HOME/src -name .node-version -depth 2); do
+    echo "$file: $(cat $file)"
+  done
+}
+
+list_project_ruby_versions() {
+  for file in $(find $HOME/src -name .ruby-version -depth 2); do
+    echo "$file: $(cat $file)"
+  done
+}
+
+list_project_python_versions() {
+  for file in $(find $HOME/src -name .python-version -depth 2); do
+    echo "$file: $(cat $file)"
+  done
+}
