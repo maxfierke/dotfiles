@@ -35,12 +35,7 @@ brew 'zlib'
 brew 'crystal-lang', args: ['with-llvm']
 
 if `uname -s`.chomp == 'Darwin'
-  brew 'php56'
-  brew 'php56-intl'
-  brew 'php56-mcrypt'
-  brew 'php56-xdebug'
-  brew 'php56-opcache'
-  brew 'php56-gmp'
+  brew 'php@5.6'
 end
 
 brew 'pyenv'
@@ -51,7 +46,7 @@ brew 'elixir' if `uname -s`.chomp == 'Darwin' # elixir from linuxbrew is reeeeee
 # Services
 brew 'nginx', restart_service: :changed
 brew 'mysql@5.6', restart_service: :changed
-brew 'postgresql', restart_service: :changed unless system('brew ls --versions postgresql@9.4 > /dev/null')
+brew 'postgresql', restart_service: :changed unless system('brew ls --versions postgresql@9.4 > /dev/null') || system('brew ls --versions postgresql@9.4.15 > /dev/null')
 brew 'redis', restart_service: :changed
 
 # Package managers
