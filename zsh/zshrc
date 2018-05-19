@@ -92,3 +92,6 @@ BULLETTRAIN_GIT_COLORIZE_DIRTY=true
 [ -f $HOME/.env_secrets.sh ] && source $HOME/.env_secrets.sh
 [ -f $HOME/.chirpstrap/env.sh ] && source $HOME/.chirpstrap/env.sh
 
+
+# added by travis gem
+[ -f /Users/mfierke/.travis/travis.sh ] && source /Users/mfierke/.travis/travis.sh
