@@ -52,5 +52,10 @@
         "textLink.foreground": "#5C6BC0"
     },
     "editor.disableTranslate3d": true,
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.historyExplorer.enabled": true,
+    "breadcrumbs.enabled": true
 }
