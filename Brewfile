@@ -46,12 +46,12 @@ brew 'elixir' if `uname -s`.chomp == 'Darwin' # elixir from linuxbrew is reeeeee
 # Services
 brew 'nginx', restart_service: :changed
 brew 'mysql@5.6', restart_service: :changed
-brew 'postgresql', restart_service: :changed unless system('brew ls --versions postgresql@9.4 > /dev/null') || system('brew ls --versions postgresql@9.4.15 > /dev/null')
+brew 'postgresql', restart_service: :changed unless system('brew ls --versions postgresql@9.4.15 > /dev/null')
 brew 'redis', restart_service: :changed
 
 # Package managers
 brew 'composer'
-brew 'yarn'
+brew 'yarn', args: ['without-node']
 
 # Development schtuff
 brew 'neovim'
