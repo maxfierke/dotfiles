@@ -19,12 +19,10 @@ ln -sfv "$DOTFILES_ROOT/vscode/settings.json" "$CODE_USER_DIR/settings.json"
 VSCODE_PACKAGES=(
   haaaad.ansible
   ms-vscode.cpptools
-  g3ortega.crystal
-  kofno.crystal-ide
+  faustinoaq.crystal-lang
   stevejpurves.cucumber
   msjsdiag.debugger-for-chrome
   EditorConfig.EditorConfig
-  sbrink.elm
   emberjs.emberjs
   codezombiech.gitignore
   eamodio.gitlens
@@ -46,7 +44,20 @@ VSCODE_PACKAGES=(
   Equinusocio.vsc-material-theme
 )
 
+REMOVE_VSCODE_PACKAGES=(
+  g3ortega.crystal
+  kofno.crystal-ide
+  sbrink.elm
+)
+
 INSTALLED_PACKAGES=( $(code --list-extensions) )
+
+for package in "${REMOVE_VSCODE_PACKAGES[@]}"; do
+  if [[ ! " ${INSTALLED_PACKAGES[@]} " =~ " ${package} " ]]; then
+    step "Uninstalling vscode extension: '$package'"
+    code --uninstall-extension $package
+  fi
+done
 
 for package in "${VSCODE_PACKAGES[@]}"; do
   step "Installing vscode extension: '$package'"
