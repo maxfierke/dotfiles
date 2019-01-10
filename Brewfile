@@ -1,5 +1,5 @@
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
+tap 'homebrew/cask'
+tap 'homebrew/cask-fonts'
 tap 'neovim/neovim'
 
 cask_args appdir: '~/Applications'
@@ -32,10 +32,6 @@ brew 'zlib'
 # Language runtimes/compilers/version managers
 brew 'crystal-lang', args: ['with-llvm']
 
-if `uname -s`.chomp == 'Darwin'
-  brew 'php@5.6'
-end
-
 brew 'pyenv'
 brew 'rbenv'
 brew 'nodenv'
@@ -54,8 +50,6 @@ brew 'yarn', args: ['without-node']
 # Development schtuff
 brew 'neovim'
 brew 'forego'
-brew 'watchman'
-
 
 if `uname -s`.chomp == 'Darwin'
   # Desktop apps
