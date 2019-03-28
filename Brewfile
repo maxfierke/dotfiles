@@ -30,7 +30,7 @@ brew 'youtube-dl'
 brew 'zlib'
 
 # Language runtimes/compilers/version managers
-brew 'crystal-lang', args: ['with-llvm']
+brew 'crystal-lang'
 
 brew 'pyenv'
 brew 'rbenv'
