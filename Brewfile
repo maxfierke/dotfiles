@@ -45,7 +45,7 @@ brew 'redis', restart_service: :changed
 
 # Package managers
 brew 'composer'
-brew 'yarn', args: ['without-node']
+brew 'yarn'
 
 # Development schtuff
 brew 'neovim'
