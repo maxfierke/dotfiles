@@ -69,6 +69,5 @@
     ],
     "prettier.eslintIntegration": true,
     "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
-    "editor.formatOnPaste": true
+    "telemetry.enableTelemetry": false
 }
