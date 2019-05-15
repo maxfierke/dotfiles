@@ -8,4 +8,5 @@ if [ ! -e "$HOME/.SpaceVim.d" ]; then
     curl -sLf https://spacevim.org/install.sh | bash -s -- install neovim
 fi
 
+pip2 install -U neovim
 pip3 install -U neovim
