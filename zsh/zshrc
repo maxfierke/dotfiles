@@ -95,3 +95,4 @@ BULLETTRAIN_GIT_COLORIZE_DIRTY=true
 
 # added by travis gem
 [ -f /Users/mfierke/.travis/travis.sh ] && source /Users/mfierke/.travis/travis.sh
+[ -f $HOME/.mstrap/env.sh ] && source $HOME/.mstrap/env.sh
