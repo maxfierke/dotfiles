@@ -54,7 +54,6 @@ brew 'forego'
 if `uname -s`.chomp == 'Darwin'
   # Desktop apps
   cask 'xquartz'
-  cask 'atom'
   cask 'flux'
   cask 'font-fira-code' unless File.exist?(File.expand_path('~/Library/Fonts/FiraCode-Bold.otf'))
   cask 'docker'
