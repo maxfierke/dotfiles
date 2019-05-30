@@ -60,13 +60,6 @@
     "breadcrumbs.enabled": true,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "github.hosts": [
-        {
-            "host": "https://github.com",
-            "username": "oauth",
-            "token": "system"
-        }
-    ],
     "prettier.eslintIntegration": true,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false
