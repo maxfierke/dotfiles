@@ -45,9 +45,6 @@ VSCODE_PACKAGES=(
 )
 
 REMOVE_VSCODE_PACKAGES=(
-  g3ortega.crystal
-  kofno.crystal-ide
-  sbrink.elm
 )
 
 INSTALLED_PACKAGES=( $(code --list-extensions) )
