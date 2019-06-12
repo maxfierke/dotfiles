@@ -26,25 +26,27 @@ VSCODE_PACKAGES=(
   emberjs.emberjs
   codezombiech.gitignore
   eamodio.gitlens
-  tberman.json-schema-validator
-  PKief.material-icon-theme
   zhuangtongfa.Material-theme
+  azemoh.one-monokai
   felixfbecker.php-pack
   ricard.PostCSS
   mohsen1.prettify-json
   esbenp.prettier-vscode
   rebornix.Ruby
   rust-lang.rust
+  monokai.theme-monokai-pro-vscode
   shardulm94.trailing-spaces
-  eg2.tslint
   whatwedo.twig
   mjmcloug.vscode-elixir
   dbaeumer.vscode-eslint
-  DSKWRK.vscode-generate-getter-setter
-  Equinusocio.vsc-material-theme
 )
 
 REMOVE_VSCODE_PACKAGES=(
+  PKief.material-icon-theme
+  tberman.json-schema-validator
+  eg2.tslint
+  Equinusocio.vsc-material-theme
+  DSKWRK.vscode-generate-getter-setter
 )
 
 INSTALLED_PACKAGES=( $(code --list-extensions) )

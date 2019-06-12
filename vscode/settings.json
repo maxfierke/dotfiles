@@ -15,7 +15,7 @@
     "terminal.integrated.fontLigatures": true,
     "explorer.openEditors.visible": 0,
     "explorer.autoReveal": false,
-    "workbench.colorTheme": "Solarized Dark",
+    "workbench.colorTheme": "Monokai Pro (Filter Machine)",
     "editor.cursorBlinking": "solid",
     "window.nativeTabs": true,
     "workbench.editor.swipeToNavigate": true,
@@ -41,7 +41,7 @@
     "files.associations": {
         "*.fdoc": "yaml"
     },
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "Monokai Pro (Filter Machine) Icons",
     "workbench.colorCustomizations": {
         "activityBarBadge.background": "#5C6BC0",
         "list.activeSelectionForeground": "#5C6BC0",
