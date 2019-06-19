@@ -15,7 +15,7 @@
     "terminal.integrated.fontLigatures": true,
     "explorer.openEditors.visible": 0,
     "explorer.autoReveal": false,
-    "workbench.colorTheme": "Monokai Pro (Filter Machine)",
+    "workbench.colorTheme": "One Monokai",
     "editor.cursorBlinking": "solid",
     "window.nativeTabs": true,
     "workbench.editor.swipeToNavigate": true,

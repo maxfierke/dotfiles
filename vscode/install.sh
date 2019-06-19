@@ -34,7 +34,6 @@ VSCODE_PACKAGES=(
   esbenp.prettier-vscode
   rebornix.Ruby
   rust-lang.rust
-  monokai.theme-monokai-pro-vscode
   shardulm94.trailing-spaces
   whatwedo.twig
   mjmcloug.vscode-elixir
@@ -43,6 +42,7 @@ VSCODE_PACKAGES=(
 
 REMOVE_VSCODE_PACKAGES=(
   PKief.material-icon-theme
+  monokai.theme-monokai-pro-vscode
   tberman.json-schema-validator
   eg2.tslint
   Equinusocio.vsc-material-theme
