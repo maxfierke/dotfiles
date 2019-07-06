@@ -103,6 +103,9 @@ defaults write com.apple.terminal SecureKeyboardEntry -bool true
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
 
+# Ensure font smoothing is enabled
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+
 defaults -currentHost write com.apple.screensaver.Basic MESSAGE "🤔🤔🤔🤔🤔"
 
 killall cfprefsd
