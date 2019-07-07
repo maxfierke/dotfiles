@@ -52,7 +52,7 @@ REMOVE_VSCODE_PACKAGES=(
 INSTALLED_PACKAGES=( $(code --list-extensions) )
 
 for package in "${REMOVE_VSCODE_PACKAGES[@]}"; do
-  if [[ ! " ${INSTALLED_PACKAGES[@]} " =~ " ${package} " ]]; then
+  if [[ " ${INSTALLED_PACKAGES[@]} " =~ " ${package} " ]]; then
     step "Uninstalling vscode extension: '$package'"
     code --uninstall-extension $package
   fi
