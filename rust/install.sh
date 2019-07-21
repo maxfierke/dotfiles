@@ -18,7 +18,7 @@ fi
 step "Defaulting to nightly rust"
 rustup default nightly
 
-step "Installing some good Rust development crates"
-cargo install -f racer
-cargo install -f rustfmt
-cargo install -f rustsym
+#step "Installing some good Rust development crates"
+#cargo install -f racer
+#cargo install -f rustfmt
+#cargo install -f rustsym
