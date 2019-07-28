@@ -19,8 +19,8 @@ install_python_versions() {
         pyenv install --skip-existing $version
         pyenv shell $version
         pyenv rehash
-        pip install ansible
-        pip install neovim
+        pip install -U pip
+        pip install -U neovim
     done
 }
 
