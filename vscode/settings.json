@@ -62,5 +62,8 @@
     "files.trimFinalNewlines": true,
     "prettier.eslintIntegration": true,
     "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false
+    "telemetry.enableTelemetry": false,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    }
 }
