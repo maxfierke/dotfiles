@@ -6,7 +6,12 @@ source $DOTFILES_ROOT/util/common.sh
 # Don't worry about it :p
 [ ! -z "$CHIRPSTRAPPED" ] && exit
 
-eval "$(rbenv init -)"
+if [ -x "$(command -v rbenv)" ]; then
+    eval "$(rbenv init -)"
+else
+    echo "Skipping, as rbenv not installed."
+    exit
+fi
 
 install_ruby_versions() {
     for version in $(find $1 -name .ruby-version -maxdepth 2 | xargs cat | sort | uniq); do

@@ -6,7 +6,12 @@ source $DOTFILES_ROOT/util/common.sh
 # Don't worry about it :p
 [ ! -z "$CHIRPSTRAPPED" ] && exit
 
-eval "$(pyenv init -)"
+if [ -x "$(command -v pyenv)" ]; then
+    eval "$(pyenv init -)"
+else
+    echo "Skipping, as pyenv is not installed."
+    exit
+fi
 
 if [ -x "$(command -v brew)" ]; then
     export CFLAGS="-I$(brew --prefix openssl)/include"
