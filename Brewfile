@@ -30,17 +30,6 @@ brew 'zlib'
 # Language runtimes/compilers/version managers
 brew 'crystal-lang'
 
-brew 'pyenv'
-brew 'rbenv'
-brew 'nodenv'
-brew 'elixir' if `uname -s`.chomp == 'Darwin' # elixir from linuxbrew is reeeeeeallllly slow for some reason
-
-# Services
-brew 'nginx', restart_service: :changed
-brew 'mysql@5.6', restart_service: :changed
-brew 'postgresql', restart_service: :changed unless system('brew ls --versions postgresql@9.4.15 > /dev/null')
-brew 'redis', restart_service: :changed
-
 # Package managers
 brew 'composer'
 brew 'yarn'
