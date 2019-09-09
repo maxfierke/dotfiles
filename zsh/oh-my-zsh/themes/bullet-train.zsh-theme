@@ -463,6 +463,7 @@ prompt_dir() {
 # RVM: only shows RUBY info if on a gemset that is not the default one
 # RBENV: shows current ruby version active in the shell; also with non-global gemsets if any is active
 # CHRUBY: shows current ruby version active in the shell
+# ASDF-RUBY: shows current ruby version active in the shell
 prompt_ruby() {
   if command -v rvm-prompt > /dev/null 2>&1; then
     prompt_segment $BULLETTRAIN_RUBY_BG $BULLETTRAIN_RUBY_FG $BULLETTRAIN_RUBY_PREFIX" $(rvm-prompt i v g)"
@@ -478,6 +479,8 @@ prompt_ruby() {
     else
       prompt_segment $BULLETTRAIN_RUBY_BG $BULLETTRAIN_RUBY_FG $BULLETTRAIN_RUBY_PREFIX" $(rbenv version | sed -e 's/ (set.*$//')"
     fi
+  elif command -v asdf > /dev/null 2>&1; then
+    prompt_segment $BULLETTRAIN_RUBY_BG $BULLETTRAIN_RUBY_FG $BULLETTRAIN_RUBY_PREFIX" $(asdf current ruby | awk '{print $1}')"
   fi
 }
 
@@ -513,20 +516,31 @@ prompt_virtualenv() {
     prompt_segment $BULLETTRAIN_VIRTUALENV_BG $BULLETTRAIN_VIRTUALENV_FG $BULLETTRAIN_VIRTUALENV_PREFIX" $(basename $virtualenv_path)"
   elif which pyenv &> /dev/null; then
     prompt_segment $BULLETTRAIN_VIRTUALENV_BG $BULLETTRAIN_VIRTUALENV_FG $BULLETTRAIN_VIRTUALENV_PREFIX" $(pyenv version | sed -e 's/ (set.*$//' | tr '\n' ' ' | sed 's/.$//')"
+  elif command -v asdf > /dev/null 2>&1; then
+    prompt_segment $BULLETTRAIN_VIRTUALENV_BG $BULLETTRAIN_VIRTUALENV_FG $BULLETTRAIN_VIRTUALENV_PREFIX" $(asdf current python | awk '{print $1}')"
   fi
 }
 
 # NVM: Node version manager
+# NODENV: rbenv, but for node
+# ASDF-NODEJS: asdf plugin for nodejs
 prompt_nvm() {
   local nvm_prompt
   if type nvm >/dev/null 2>&1; then
     nvm_prompt=$(nvm current 2>/dev/null)
     [[ "${nvm_prompt}x" == "x" ]] && return
-  else
+  elif which nodenv &> /dev/null; then
+    nvm_prompt="$(nodenv version | sed -e 's/ (set.*$//')"
+  elif command -v asdf > /dev/null 2>&1; then
+    nvm_prompt="$(asdf current nodejs | awk '{print $1}')"
+  elif command -v node > /dev/null 2>&1; then
     nvm_prompt="$(node --version)"
   fi
   nvm_prompt=${nvm_prompt}
-  prompt_segment $BULLETTRAIN_NVM_BG $BULLETTRAIN_NVM_FG $BULLETTRAIN_NVM_PREFIX$nvm_prompt
+
+  if [ ! -z "$nvm_prompt" ]; then
+    prompt_segment $BULLETTRAIN_NVM_BG $BULLETTRAIN_NVM_FG $BULLETTRAIN_NVM_PREFIX$nvm_prompt
+  fi
 }
 
 #AWS Profile
