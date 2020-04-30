@@ -28,7 +28,8 @@ brew 'youtube-dl'
 brew 'zlib'
 
 # Language runtimes/compilers/version managers
-brew 'crystal-lang'
+# Formula is broken in Linuxbrew right now
+brew 'crystal-lang' if `uname -s`.chomp == 'Darwin'
 
 # Package managers
 brew 'composer'
