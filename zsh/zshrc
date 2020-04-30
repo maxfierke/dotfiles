@@ -81,6 +81,10 @@ export GPG_TTY=$(tty)
 [ -f $HOME/.dotfiles/zsh/env.sh ] && source $HOME/.dotfiles/zsh/env.sh
 [ -f $HOME/.dotfiles/zsh/aliases.sh ] && source $HOME/.dotfiles/zsh/aliases.sh
 
+# Linuxbrew stuff
+test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
+test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
 # Theme stuff
 BULLETTRAIN_CONTEXT_SHOW=true
 BULLETTRAIN_STATUS_EXIT_SHOW=true
@@ -95,4 +99,3 @@ BULLETTRAIN_GIT_COLORIZE_DIRTY=true
 
 # added by travis gem
 [ -f /Users/mfierke/.travis/travis.sh ] && source /Users/mfierke/.travis/travis.sh
-[ -f $HOME/.mstrap/env.sh ] && source $HOME/.mstrap/env.sh
