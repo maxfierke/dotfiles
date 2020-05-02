@@ -1,24 +1,20 @@
 swipe:
   3:
     left:
-      command: 'xdotool key ctrl+alt+Down'
+      sendkey: 'LEFTCTRL+LEFTALT+DOWN'
+      # workspace: 'next' # disabled until wmctrl can detect gnome wayland desktops
     right:
-      command: 'xdotool key ctrl+alt+Up'
+      sendkey: 'LEFTCTRL+LEFTALT+UP'
+      # workspace: 'prev'  # disabled until wmctrl can detect gnome wayland desktops
     up:
-      command: 'xdotool key super'
+      # command: 'xdotool key super'
+      sendkey: 'LEFTMETA'
     down:
-      command: 'xdotool key super'
-
-pinch:
-  in:
-    command: 'xdotool key ctrl+plus'
-  out:
-     command: 'xdotool key ctrl+minus'
+      # command: 'xdotool key super'
+      sendkey: 'LEFTMETA'
 
 threshold:
   swipe: 0.4
-  pinch: 0.4
 
 interval:
   swipe: 0.8
-  pinch: 0.1

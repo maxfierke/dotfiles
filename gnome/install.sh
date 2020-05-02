@@ -17,12 +17,22 @@ step 'Setting up gesture support'
 
 sudo gpasswd -a $USER input
 
-if [ ! -x "$(command -v ruby)" ] || [ ! -x "$(command -v xdotool)" ]; then
-    sudo apt install -y ruby libinput-tools xdotool
+if [ ! -x "$(command -v ruby)" ]; then
+    sudo apt install -y ruby libinput-tools
 fi
 
 if [ ! -x "$(command -v fusuma)" ]; then
     sudo gem install fusuma
+fi
+
+if [ ! -x "$(command -v fusuma-sendkey)" ]; then
+    sudo apt install -y ruby-dev libevdev-dev
+    sudo /usr/bin/gem install fusuma-plugin-sendkey
+fi
+
+if [ ! -x "$(command -v wmctrl)" ]; then
+    sudo apt install -y wmctrl
+    sudo /usr/bin/gem install fusuma-plugin-wmctrl
 fi
 
 mkdir -p "$HOME/.config/fusuma"
