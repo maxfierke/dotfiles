@@ -13,12 +13,13 @@ step 'Setting some nice defaults'
 
 dconf write "/org/gnome/desktop/input-sources/xkb-options" "['caps:escape']"
 
-step 'Nice defaults set. Might need to logout and log back in for some to take effect'
+step_ok 'Nice defaults set. Might need to logout and log back in for some to take effect'
 
 ### GNOME Terminal profile
 
 step 'Loading GNOME terminal profile'
 dconf load /org/gnome/terminal/legacy/profiles:/ < $DOTFILES_ROOT/gnome/gnome-terminal-profiles.dconf
+step_ok 'Loaded GNOME terminal profile'
 
 ### Gesture support
 step 'Setting up gesture support'
@@ -51,4 +52,4 @@ if [ "$(ps -aux | grep 'fusuma' -c)" -le 1 ]; then
     fusuma -d
 fi
 
-step 'Swipe gestures have been setup. Be sure to add `fusuma -d` to your startup applications.'
+step_ok 'Swipe gestures have been setup. Be sure to add `fusuma -d` to your startup applications.'

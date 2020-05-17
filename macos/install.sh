@@ -110,4 +110,4 @@ defaults -currentHost write com.apple.screensaver.Basic MESSAGE "🤔🤔🤔�
 
 killall cfprefsd
 
-step 'Nice defaults set. Might need to logout and log back in for some to take effect'
+step_ok 'Nice defaults set. Might need to logout and log back in for some to take effect'

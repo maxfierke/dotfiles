@@ -1,11 +1,12 @@
 #!/bin/bash
 
-set -e
+set -euo pipefail
 source $DOTFILES_ROOT/util/common.sh
 
 if [ ! -d "$HOME/.SpaceVim.d" ]; then
     step 'Installing spacevim for neovim'
     curl -sLf https://spacevim.org/install.sh | bash -s -- install neovim
+    step_ok 'Installed'
 fi
 
 if [ -x "/usr/local/bin/pip2" ]; then

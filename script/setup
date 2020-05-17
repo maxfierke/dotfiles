@@ -14,21 +14,25 @@ source $DOTFILES_ROOT/util/common.sh
 if [ ! -d "$ZSH" ]; then
   step "Grabbing oh-my-zsh, if it's not already there"
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  step_ok "Installed oh-my-zsh"
 fi
 
 if [ ! -L $HOME/.zshrc ]; then
   step "Linking the zshrc"
   ln -sf $DOTFILES_ROOT/zsh/zshrc $HOME/.zshrc
+  step_ok "Linked"
 fi
 
 if [ ! -L $HOME/.Brewfile ]; then
   step "Linking the Brewfile"
   ln -sf $DOTFILES_ROOT/Brewfile $HOME/.Brewfile
+  step_ok "Linked"
 fi
 
 source $HOME/.zshrc
 
 step 'Ensuring Brew dependencies are up-to-date'
 brew bundle --file=$DOTFILES_ROOT/Brewfile check || brew bundle --file=$DOTFILES_ROOT/Brewfile install
+step_ok 'Brewfile dependencies up-to-date'
 
 find . -name install.sh -not -path "./vendor/*"  | while read installer ; do sh -c "${installer}" ; done

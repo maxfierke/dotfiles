@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -euo pipefail
 source $DOTFILES_ROOT/util/common.sh
 
 # Ensure code exists, or exit otherwise
@@ -55,6 +55,7 @@ for package in "${REMOVE_VSCODE_PACKAGES[@]}"; do
   if [[ " ${INSTALLED_PACKAGES[@]} " =~ " ${package} " ]]; then
     step "Uninstalling vscode extension: '$package'"
     code --uninstall-extension $package
+    step_ok "Uninstalled"
   fi
 done
 
@@ -62,7 +63,8 @@ for package in "${VSCODE_PACKAGES[@]}"; do
   step "Installing vscode extension: '$package'"
   if [[ ! " ${INSTALLED_PACKAGES[@]} " =~ " ${package} " ]]; then
     code --install-extension $package
+    step_ok "Installed"
   else
-    echo "Already installed $package"
+    step_skip "Already installed $package"
   fi
 done

@@ -1,14 +1,16 @@
 #!/bin/bash
 
-set -e
+set -euo pipefail
 source $DOTFILES_ROOT/util/common.sh
 
 if command -v rustup 2>&1 > /dev/null; then
   step "Updating Rust via rustup"
   rustup update
+  step_ok "Updated rust via rustup"
 else
   step "Rustup not installed. Installing rustup"
   curl https://sh.rustup.rs -sSf | sh
+  step_ok "Rustup installed"
 fi
 
 if command -v cargo 2>&1 > /dev/null; then
