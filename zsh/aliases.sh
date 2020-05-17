@@ -21,6 +21,10 @@ respawn_rabbitmq() {
   echo 'Success!'
 }
 
+dump_gnome_term_profile() {
+  dconf dump /org/gnome/terminal/legacy/profiles:/ > $HOME/.dotfiles/gnome/gnome-terminal-profiles.dconf
+}
+
 purge_dns_cache() {
   sudo killall -HUP mDNSResponder
   sudo killall mDNSResponderHelper

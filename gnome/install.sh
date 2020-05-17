@@ -7,12 +7,20 @@ if [ ! -x "$(command -v dconf)" ] || [ "$(lsb_release -is)" != "Ubuntu" ]; then
     exit
 fi
 
+### Various dconf Settings
+
 step 'Setting some nice defaults'
 
 dconf write "/org/gnome/desktop/input-sources/xkb-options" "['caps:escape']"
 
 step 'Nice defaults set. Might need to logout and log back in for some to take effect'
 
+### GNOME Terminal profile
+
+step 'Loading GNOME terminal profile'
+dconf load /org/gnome/terminal/legacy/profiles:/ < $DOTFILES_ROOT/gnome/gnome-terminal-profiles.dconf
+
+### Gesture support
 step 'Setting up gesture support'
 
 sudo gpasswd -a $USER input
