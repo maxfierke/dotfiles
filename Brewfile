@@ -1,5 +1,6 @@
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
+tap 'mitchellh/gon' if `uname -s`.chomp == 'Darwin'
 tap 'neovim/neovim'
 
 brew 'ack'
@@ -38,6 +39,8 @@ brew 'neovim'
 brew 'forego'
 
 if `uname -s`.chomp == 'Darwin'
+  brew 'gon'
+
   # Desktop apps
   cask 'xquartz'
   cask '1password'
