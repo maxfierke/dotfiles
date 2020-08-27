@@ -13,7 +13,7 @@ source $DOTFILES_ROOT/util/common.sh
 
 if [ ! -d "$ZSH" ]; then
   step "Grabbing oh-my-zsh, if it's not already there"
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
   step_ok "Installed oh-my-zsh"
 fi
 
