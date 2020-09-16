@@ -51,7 +51,15 @@ ZSH_CUSTOM="$HOME/.dotfiles/zsh/oh-my-zsh"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git github ruby bundler ssh-agent rake brew osx)
+plugins=(git github bundler ssh-agent rake)
+
+# Load homebrew ZSH completions
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
 
 source $ZSH/oh-my-zsh.sh
 
