@@ -480,7 +480,7 @@ prompt_ruby() {
       prompt_segment $BULLETTRAIN_RUBY_BG $BULLETTRAIN_RUBY_FG $BULLETTRAIN_RUBY_PREFIX" $(rbenv version | sed -e 's/ (set.*$//')"
     fi
   elif command -v asdf > /dev/null 2>&1; then
-    prompt_segment $BULLETTRAIN_RUBY_BG $BULLETTRAIN_RUBY_FG $BULLETTRAIN_RUBY_PREFIX" $(asdf current ruby | awk '{print $1}')"
+    prompt_segment $BULLETTRAIN_RUBY_BG $BULLETTRAIN_RUBY_FG $BULLETTRAIN_RUBY_PREFIX" $(asdf current ruby | sed 's/ruby//' | awk '{print $1}')"
   fi
 }
 
@@ -517,7 +517,7 @@ prompt_virtualenv() {
   elif which pyenv &> /dev/null; then
     prompt_segment $BULLETTRAIN_VIRTUALENV_BG $BULLETTRAIN_VIRTUALENV_FG $BULLETTRAIN_VIRTUALENV_PREFIX" $(pyenv version | sed -e 's/ (set.*$//' | tr '\n' ' ' | sed 's/.$//')"
   elif command -v asdf > /dev/null 2>&1; then
-    prompt_segment $BULLETTRAIN_VIRTUALENV_BG $BULLETTRAIN_VIRTUALENV_FG $BULLETTRAIN_VIRTUALENV_PREFIX" $(asdf current python | awk '{print $1}')"
+    prompt_segment $BULLETTRAIN_VIRTUALENV_BG $BULLETTRAIN_VIRTUALENV_FG $BULLETTRAIN_VIRTUALENV_PREFIX" $(asdf current python | sed 's/python//' | awk '{print $1}')"
   fi
 }
 
@@ -532,7 +532,7 @@ prompt_nvm() {
   elif which nodenv &> /dev/null; then
     nvm_prompt="$(nodenv version | sed -e 's/ (set.*$//')"
   elif command -v asdf > /dev/null 2>&1; then
-    nvm_prompt="$(asdf current nodejs | awk '{print $1}')"
+    nvm_prompt="$(asdf current nodejs | sed 's/nodejs//' | awk '{print $1}')"
   elif command -v node > /dev/null 2>&1; then
     nvm_prompt="$(node --version)"
   fi
