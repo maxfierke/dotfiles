@@ -38,6 +38,7 @@ VSCODE_PACKAGES=(
   whatwedo.twig
   mjmcloug.vscode-elixir
   dbaeumer.vscode-eslint
+  dtsvet.vscode-wasm
 )
 
 REMOVE_VSCODE_PACKAGES=(
