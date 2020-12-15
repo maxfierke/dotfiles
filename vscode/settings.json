@@ -66,7 +66,15 @@
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
+    "javascript.implicitProjectConfig.experimentalDecorators": true,
+    "ruby.format": "rubocop",
+    "ruby.useLanguageServer": true,
+    "ruby.useBundler": true,
+    "go.formatTool": "goimports",
     "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }
