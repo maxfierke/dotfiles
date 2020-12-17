@@ -30,6 +30,7 @@ if [ ! -n "${BULLETTRAIN_PROMPT_ORDER+1}" ]; then
     aws
     go
     elixir
+    rust
     git
     hg
     cmd_exec_time
@@ -147,6 +148,18 @@ if [ ! -n "${BULLETTRAIN_ELIXIR_FG+1}" ]; then
 fi
 if [ ! -n "${BULLETTRAIN_ELIXIR_PREFIX+1}" ]; then
   BULLETTRAIN_ELIXIR_PREFIX="💧"
+fi
+
+# RUST
+if [ ! -n "${BULLETTRAIN_RUST_BG+1}" ]; then
+  local orange=172
+  BULLETTRAIN_RUST_BG=$orange
+fi
+if [ ! -n "${BULLETTRAIN_RUST_FG+1}" ]; then
+  BULLETTRAIN_RUST_FG=white
+fi
+if [ ! -n "${BULLETTRAIN_RUST_PREFIX+1}" ]; then
+  BULLETTRAIN_RUST_PREFIX="🦀"
 fi
 
 # DIR
@@ -481,6 +494,13 @@ prompt_ruby() {
     fi
   elif command -v asdf > /dev/null 2>&1; then
     prompt_segment $BULLETTRAIN_RUBY_BG $BULLETTRAIN_RUBY_FG $BULLETTRAIN_RUBY_PREFIX" $(asdf current ruby | sed 's/ruby//' | awk '{print $1}')"
+  fi
+}
+
+# RUST
+prompt_rust() {
+  if command -v rustc > /dev/null 2>&1; then
+    prompt_segment $BULLETTRAIN_RUST_BG $BULLETTRAIN_RUST_FG $BULLETTRAIN_RUST_PREFIX" $(rustc -V | awk '{print $2}')"
   fi
 }
 
