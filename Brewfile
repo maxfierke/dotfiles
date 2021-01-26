@@ -28,14 +28,14 @@ brew 'zlib'
 
 # Language runtimes/compilers/version managers
 # Formula is broken in Linuxbrew right now
-brew 'crystal-lang' if `uname -s`.chomp == 'Darwin'
+brew 'crystal-lang' if `uname -s`.chomp == 'Darwin' && `arch`.chomp != "arm64"
 
 # Package managers
 brew 'composer'
 brew 'yarn'
 
 # Development schtuff
-brew 'neovim'
+brew 'neovim' unless RUBY_PLATFORM =~ /arm64e?-darwin/
 brew 'forego'
 
 if `uname -s`.chomp == 'Darwin'
@@ -49,7 +49,7 @@ if `uname -s`.chomp == 'Darwin'
   cask 'font-fira-code' unless File.exist?(File.expand_path('~/Library/Fonts/FiraCode-Bold.otf'))
   cask 'docker'
   cask 'firefox'
-  cask 'google-chrome'
+  cask 'google-chrome' unless File.exist?('/Applications/Google Chrome.app')
   cask 'gpg-suite'
   cask 'insomnia'
   cask 'iterm2'
