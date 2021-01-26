@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -euo pipefail
+set -eo pipefail
 source $DOTFILES_ROOT/util/common.sh
 
 # Ensure code exists, or exit otherwise
@@ -26,13 +26,13 @@ VSCODE_PACKAGES=(
   emberjs.emberjs
   codezombiech.gitignore
   eamodio.gitlens
-  zhuangtongfa.Material-theme
+  zhuangtongfa.material-theme
   azemoh.one-monokai
   felixfbecker.php-pack
-  ricard.PostCSS
+  ricard.postcss
   mohsen1.prettify-json
   esbenp.prettier-vscode
-  rebornix.Ruby
+  rebornix.ruby
   rust-lang.rust
   shardulm94.trailing-spaces
   whatwedo.twig
@@ -52,17 +52,19 @@ REMOVE_VSCODE_PACKAGES=(
 
 INSTALLED_PACKAGES=( $(code --list-extensions) )
 
-for package in "${REMOVE_VSCODE_PACKAGES[@]}"; do
-  if [[ " ${INSTALLED_PACKAGES[@]} " =~ " ${package} " ]]; then
-    step "Uninstalling vscode extension: '$package'"
-    code --uninstall-extension $package
-    step_ok "Uninstalled"
-  fi
-done
+if [ ! -z "$INSTALLED_PACKAGES" ]; then
+  for package in "${REMOVE_VSCODE_PACKAGES[@]}"; do
+    if [[ " ${INSTALLED_PACKAGES[@]} " =~ " ${package} " ]]; then
+      step "Uninstalling vscode extension: '$package'"
+      code --uninstall-extension $package
+      step_ok "Uninstalled"
+    fi
+  done
+fi
 
 for package in "${VSCODE_PACKAGES[@]}"; do
   step "Installing vscode extension: '$package'"
-  if [[ ! " ${INSTALLED_PACKAGES[@]} " =~ " ${package} " ]]; then
+  if [ ! -z "$INSTALLED_PACKAGES" ] && [[ ! " ${INSTALLED_PACKAGES[@]} " =~ " ${package} " ]]; then
     code --install-extension $package
     step_ok "Installed"
   else
