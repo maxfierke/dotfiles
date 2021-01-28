@@ -23,7 +23,7 @@ VSCODE_PACKAGES=(
   stevejpurves.cucumber
   msjsdiag.debugger-for-chrome
   EditorConfig.EditorConfig
-  emberjs.emberjs
+  embertooling.emberjs
   codezombiech.gitignore
   eamodio.gitlens
   zhuangtongfa.material-theme
@@ -64,7 +64,7 @@ fi
 
 for package in "${VSCODE_PACKAGES[@]}"; do
   step "Installing vscode extension: '$package'"
-  if [ ! -z "$INSTALLED_PACKAGES" ] && [[ ! " ${INSTALLED_PACKAGES[@]} " =~ " ${package} " ]]; then
+  if [ -z "$INSTALLED_PACKAGES" ] || [[ ! " ${INSTALLED_PACKAGES[@]} " =~ " ${package} " ]]; then
     code --install-extension $package
     step_ok "Installed"
   else
