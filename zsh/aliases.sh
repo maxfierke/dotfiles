@@ -10,7 +10,10 @@ alias got=git
 alias fix_enter="stty sane"
 alias fix_webcam="sudo killall VDCAssistant"
 alias maps="telnet mapscii.me"
-alias vim="nvim"
+
+if command -v nvim >/dev/null 2>&1; then
+  alias vim="nvim"
+fi
 
 respawn_rabbitmq() {
   until rabbitmqctl cluster_status; do
