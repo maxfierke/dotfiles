@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -euo pipefail
+set -eo pipefail
 source $DOTFILES_ROOT/util/common.sh
 
 if [ ! -d "$HOME/.SpaceVim.d" ]; then
