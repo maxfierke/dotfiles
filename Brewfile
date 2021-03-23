@@ -43,22 +43,17 @@ if `uname -s`.chomp == 'Darwin'
 
   # Desktop apps
   cask 'xquartz'
-  cask '1password'
-  cask '1password-cli'
   cask 'flux'
   cask 'font-fira-code' unless File.exist?(File.expand_path('~/Library/Fonts/FiraCode-Bold.otf'))
   cask 'docker'
   cask 'firefox'
   cask 'google-chrome' unless File.exist?('/Applications/Google Chrome.app')
-  cask 'gpg-suite'
   cask 'insomnia'
   cask 'iterm2'
   cask 'postico'
-  cask 'sequel-pro'
   cask 'slack'
   cask 'steam'
   cask 'tidal'
-  cask 'tunnelblick'
   cask 'visual-studio-code'
   cask 'vlc'
 end
