@@ -29,6 +29,8 @@
         "**/dist/**": true,
         "**/node_modules/**": true,
         "**/bower_components/**": true,
+        "**/bower_components.ember-try/**": true,
+        "**/node_modules.ember-try/**": true,
         "**/*.retry": true
     },
     "files.watcherExclude": {
@@ -36,7 +38,9 @@
         "**/tmp/**": true,
         "**/dist/**": true,
         "**/node_modules/**": true,
-        "**/bower_components/**": true
+        "**/bower_components/**": true,
+        "**/bower_components.ember-try/**": true,
+        "**/node_modules.ember-try/**": true
     },
     "files.associations": {
         "*.fdoc": "yaml"
@@ -67,6 +71,7 @@
         "editor.defaultFormatter": "vscode.html-language-features"
     },
     "javascript.implicitProjectConfig.experimentalDecorators": true,
+    "js/ts.implicitProjectConfig.experimentalDecorators": true,
     "ruby.format": "rubocop",
     "ruby.useLanguageServer": true,
     "ruby.useBundler": true,
