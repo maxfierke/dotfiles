@@ -19,7 +19,7 @@ ln -sfv "$DOTFILES_ROOT/vscode/settings.json" "$CODE_USER_DIR/settings.json"
 VSCODE_PACKAGES=(
   haaaad.ansible
   ms-vscode.cpptools
-  faustinoaq.crystal-lang
+  crystal-lang-tools.crystal-lang
   stevejpurves.cucumber
   msjsdiag.debugger-for-chrome
   EditorConfig.EditorConfig
