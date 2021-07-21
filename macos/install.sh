@@ -106,6 +106,9 @@ defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -boo
 # Ensure font smoothing is enabled
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
 
+# Enable full paths in title, no truncating
+defaults write com.apple.finder NSWindowSupportsAutomaticInlineTitle -bool false
+
 defaults -currentHost write com.apple.screensaver.Basic MESSAGE "🤔🤔🤔🤔🤔"
 
 killall cfprefsd
