@@ -9,12 +9,8 @@ if [ ! -d "$HOME/.SpaceVim.d" ]; then
     step_ok 'Installed'
 fi
 
-if [ -x "/usr/local/bin/pip2" ]; then
-    /usr/local/bin/pip2 install -U neovim
-fi
-
 if [ -x "/usr/local/bin/pip3" ]; then
-    /usr/local/bin/pip3 install -U neovim
+    /usr/local/bin/pip3 install -U pynvim
 fi
 
 
@@ -40,9 +36,9 @@ for python in $pythons; do
     if [ "$PY_VERSION_MANAGER" == "pyenv" ]; then
         pyenv shell $python
         pyenv rehash
-        pyenv exec pip install -U neovim
+        pyenv exec pip install -U pynvim
     else
         ASDF_PYTHON_VERSION=$python asdf reshim pip $python
-        ASDF_PYTHON_VERSION=$python asdf exec pip install -U neovim
+        ASDF_PYTHON_VERSION=$python asdf exec pip install -U pynvim
     fi
 done
