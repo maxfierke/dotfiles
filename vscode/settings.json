@@ -15,7 +15,6 @@
     "terminal.integrated.fontLigatures": true,
     "explorer.openEditors.visible": 0,
     "explorer.autoReveal": false,
-    "workbench.colorTheme": "One Monokai",
     "editor.cursorBlinking": "solid",
     "window.nativeTabs": true,
     "workbench.editor.swipeToNavigate": true,
@@ -56,7 +55,6 @@
         "textLink.foreground": "#5C6BC0"
     },
     "editor.disableTranslate3d": true,
-    "window.zoomLevel": 0,
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
     },
@@ -68,7 +66,8 @@
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
+        "editor.defaultFormatter": "vscode.html-language-features",
+        "editor.fontLigatures": false,
     },
     "javascript.implicitProjectConfig.experimentalDecorators": true,
     "js/ts.implicitProjectConfig.experimentalDecorators": true,
@@ -76,6 +75,9 @@
     "ruby.useLanguageServer": true,
     "ruby.useBundler": true,
     "go.formatTool": "goimports",
+    "[handlebars]": {
+        "editor.fontLigatures": false,
+    },
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -83,5 +85,12 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "workbench.editor.untitled.hint": "hidden",
-    "docker.showStartPage": false
+    "docker.showStartPage": false,
+    "editor.bracketPairColorization.enabled": true,
+    "workbench.colorTheme": "One Monokai",
+    "workbench.preferredDarkColorTheme": "One Monokai",
+    "workbench.preferredLightColorTheme": "Solarized Light",
+    "window.autoDetectColorScheme": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "git.autofetch": true
 }
