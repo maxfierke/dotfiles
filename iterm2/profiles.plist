@@ -17,13 +17,13 @@
         "Red Component" : 0.44977453351020807,
         "Blue Component" : 0.02020875550806522
       },
-      "Draw Powerline Glyphs" : false,
+      "Draw Powerline Glyphs" : true,
       "Bold Color" : {
         "Green Component" : 0.56485837697982788,
         "Red Component" : 0.50599193572998047,
         "Blue Component" : 0.56363654136657715
       },
-      "Normal Font" : "FiraCode-Retina 12",
+      "Normal Font" : "FiraCodeRoman-Medium 12",
       "Ansi 3 Color" : {
         "Green Component" : 0.46751424670219421,
         "Red Component" : 0.64746475219726562,

@@ -16,10 +16,21 @@ if fc-list | grep -q -i 'Fira Code:style=Regular'; then
 fi
 
 step "Installing FiraCode from GitHub"
-for type in Bold Light Medium Regular Retina; do
-  wget -O ~/.local/share/fonts/FiraCode-${type}.ttf \
-  "https://github.com/tonsky/FiraCode/blob/master/distr/ttf/FiraCode-${type}.ttf?raw=true";
-done
+
+fonts_dir="${HOME}/.local/share/fonts"
+if [ ! -d "${fonts_dir}" ]; then
+    echo "mkdir -p $fonts_dir"
+    mkdir -p "${fonts_dir}"
+else
+    echo "Found fonts dir $fonts_dir"
+fi
+
+version=6.2
+zip=Fira_Code_v${version}.zip
+curl --fail --location --show-error https://github.com/tonsky/FiraCode/releases/download/${version}/${zip} --output ${zip}
+unzip -o -q -d ${fonts_dir} ${zip}
+rm ${zip}
+
 step_ok "Installed"
 
 step "Clearing font caches"
