@@ -17,7 +17,7 @@ mkdir -p "$CODE_USER_DIR"
 ln -sfv "$DOTFILES_ROOT/vscode/settings.json" "$CODE_USER_DIR/settings.json"
 
 VSCODE_PACKAGES=(
-  haaaad.ansible
+  redhat.ansible
   ms-vscode.cpptools
   crystal-lang-tools.crystal-lang
   stevejpurves.cucumber
