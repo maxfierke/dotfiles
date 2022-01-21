@@ -51,7 +51,7 @@ if `uname -s`.chomp == 'Darwin'
   cask 'insomnia'
   cask 'iterm2'
   cask 'postico'
-  cask 'slack'
+  cask 'slack' unless File.exist?('/Applications/Slack.app')
   cask 'steam'
   cask 'tidal'
   cask 'visual-studio-code'
