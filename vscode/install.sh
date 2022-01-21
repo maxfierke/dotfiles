@@ -28,7 +28,7 @@ VSCODE_PACKAGES=(
   eamodio.gitlens
   zhuangtongfa.material-theme
   azemoh.one-monokai
-  felixfbecker.php-pack
+  xdebug.php-pack
   ricard.postcss
   mohsen1.prettify-json
   esbenp.prettier-vscode
@@ -42,6 +42,8 @@ VSCODE_PACKAGES=(
 )
 
 REMOVE_VSCODE_PACKAGES=(
+  haaaad.ansible
+  felixbecker.php-pack
   PKief.material-icon-theme
   monokai.theme-monokai-pro-vscode
   tberman.json-schema-validator
