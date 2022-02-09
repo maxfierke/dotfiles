@@ -93,5 +93,6 @@
     "workbench.preferredLightColorTheme": "Solarized Light",
     "window.autoDetectColorScheme": true,
     "diffEditor.ignoreTrimWhitespace": false,
-    "git.autofetch": true
+    "git.autofetch": true,
+    "redhat.telemetry.enabled": false
 }
