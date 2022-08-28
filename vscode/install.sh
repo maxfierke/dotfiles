@@ -20,12 +20,11 @@ VSCODE_PACKAGES=(
   redhat.ansible
   ms-vscode.cpptools
   crystal-lang-tools.crystal-lang
-  stevejpurves.cucumber
-  msjsdiag.debugger-for-chrome
+  plorefice.devicetree
   EditorConfig.EditorConfig
-  embertooling.emberjs
   codezombiech.gitignore
   eamodio.gitlens
+  ms-vscode.js-debug
   zhuangtongfa.material-theme
   azemoh.one-monokai
   xdebug.php-pack
@@ -33,22 +32,28 @@ VSCODE_PACKAGES=(
   mohsen1.prettify-json
   esbenp.prettier-vscode
   rebornix.ruby
-  rust-lang.rust
+  rust-lang.rust-analyzer
   shardulm94.trailing-spaces
   whatwedo.twig
   mjmcloug.vscode-elixir
+  lifeart.vscode-ember-unstable
   dbaeumer.vscode-eslint
   dtsvet.vscode-wasm
 )
 
 REMOVE_VSCODE_PACKAGES=(
   haaaad.ansible
+  stevejpurves.cucumber
+  msjsdiag.debugger-for-chrome
+  embertooling.emberjs
   felixbecker.php-pack
   PKief.material-icon-theme
+  rust-lang.rust
   monokai.theme-monokai-pro-vscode
   tberman.json-schema-validator
   eg2.tslint
   Equinusocio.vsc-material-theme
+  embertooling.vscode-ember
   DSKWRK.vscode-generate-getter-setter
 )
 

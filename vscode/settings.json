@@ -8,7 +8,6 @@
     "editor.rulers": [
         80
     ],
-    "editor.renderIndentGuides": true,
     "editor.renderControlCharacters": true,
     "editor.renderLineHighlight": "all",
     "editor.formatOnSave": false,
@@ -94,5 +93,6 @@
     "window.autoDetectColorScheme": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "git.autofetch": true,
-    "redhat.telemetry.enabled": false
+    "redhat.telemetry.enabled": false,
+    "editor.guides.indentation": true
 }
