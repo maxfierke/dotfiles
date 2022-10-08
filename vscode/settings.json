@@ -94,5 +94,6 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "git.autofetch": true,
     "redhat.telemetry.enabled": false,
-    "editor.guides.indentation": true
+    "editor.guides.indentation": true,
+    "mesonbuild.configureOnOpen": false
 }
