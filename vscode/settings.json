@@ -95,5 +95,8 @@
     "git.autofetch": true,
     "redhat.telemetry.enabled": false,
     "editor.guides.indentation": true,
-    "mesonbuild.configureOnOpen": false
+    "mesonbuild.configureOnOpen": false,
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "rust-analyzer.inlayHints.renderColons": false
 }
