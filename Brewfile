@@ -27,17 +27,26 @@ brew 'zlib'
 
 # Language runtimes/compilers/version managers
 # Formula is broken in Linuxbrew right now
-brew 'crystal-lang' if `uname -s`.chomp == 'Darwin' && `arch`.chomp != "arm64"
+brew 'crystal' if OS.mac?
 
 # Package managers
 brew 'composer'
 brew 'yarn'
 
 # Development schtuff
-brew 'neovim' unless RUBY_PLATFORM =~ /arm64e?-darwin/
+brew 'neovim'
 brew 'forego'
 
-if `uname -s`.chomp == 'Darwin'
+# Dependencies for things downstream
+
+## pg gem
+brew 'libpq', link: true, force: true, conflicts_with: ["postgresql"]
+
+## php
+brew 're2c'
+
+
+if OS.mac?
   # Desktop apps
   cask 'xquartz'
   cask 'flux'
