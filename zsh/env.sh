@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
-export DOTFILES_ROOT="$HOME/.dotfiles"
-
 if command -v snap >/dev/null 2>&1; then
-    if echo $PATH | grep -q ':/snap/bin'; then
-    else
+    if ! echo "$PATH" | grep -q ':/snap/bin'; then
         # Add snap bin to PATH if it wasn't set correctly by OS
         export PATH="$PATH:/snap/bin"
     fi

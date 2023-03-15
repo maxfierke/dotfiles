@@ -1,8 +1,16 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+if [ -d "/workspaces/.codespaces/.persistedshare/dotfiles" ]; then
+  # Codespaces mounts dotfiles as a volume. Handle that volume.
+  export DOTFILES_ROOT="${DOTFILES_ROOT:-"/workspaces/.codespaces/.persistedshare/dotfiles"}"
+else
+  # Normal computer
+  export DOTFILES_ROOT="${DOTFILES_ROOT:-"$HOME/.dotfiles"}"
+fi
+
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.dotfiles/vendor/.oh-my-zsh"
+export ZSH="$DOTFILES_ROOT/vendor/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -45,7 +53,7 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM="$HOME/.dotfiles/zsh/oh-my-zsh"
+ZSH_CUSTOM="$DOTFILES_ROOT/zsh/oh-my-zsh"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -54,7 +62,7 @@ ZSH_CUSTOM="$HOME/.dotfiles/zsh/oh-my-zsh"
 plugins=(git github bundler ssh-agent rake)
 
 # Load homebrew ZSH completions
-if type brew &>/dev/null; then
+if type brew &>/dev/null 2>&1; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 
   autoload -Uz compinit
@@ -72,9 +80,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
+  export EDITOR='vim'
 else
-   export EDITOR='nvim'
+  export EDITOR='nvim'
 fi
 
 # Compilation flags
@@ -86,8 +94,8 @@ fi
 # GPG tty passphrase
 export GPG_TTY=$(tty)
 
-[ -f $HOME/.dotfiles/zsh/env.sh ] && source $HOME/.dotfiles/zsh/env.sh
-[ -f $HOME/.dotfiles/zsh/aliases.sh ] && source $HOME/.dotfiles/zsh/aliases.sh
+[ -f "$DOTFILES_ROOT/zsh/env.sh" ] && source "$DOTFILES_ROOT/zsh/env.sh"
+[ -f "$DOTFILES_ROOT/zsh/aliases.sh" ] && source "$DOTFILES_ROOT/zsh/aliases.sh"
 
 # Theme stuff
 BULLETTRAIN_CONTEXT_SHOW=true
@@ -98,5 +106,6 @@ BULLETTRAIN_GIT_COLORIZE_DIRTY=true
 
 # Machine-specific stuff
 [ -f $HOME/.env_secrets.sh ] && source $HOME/.env_secrets.sh
-[ -f $HOME/.chirpstrap/env.sh ] && source $HOME/.chirpstrap/env.sh
 [ -f $HOME/.mstrap/env.sh ] && source $HOME/.mstrap/env.sh
+
+[ -f $HOME/.chirpstrap/env.sh ] && source $HOME/.chirpstrap/env.sh
