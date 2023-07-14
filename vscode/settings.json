@@ -64,17 +64,17 @@
     "files.trimFinalNewlines": true,
     "prettier.eslintIntegration": true,
     "telemetry.telemetryLevel": "off",
-    "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features",
-        "editor.fontLigatures": false,
-    },
     "js/ts.implicitProjectConfig.experimentalDecorators": true,
     "ruby.format": "rubocop",
     "ruby.useLanguageServer": true,
     "ruby.useBundler": true,
     "go.formatTool": "goimports",
     "[handlebars]": {
-        "editor.fontLigatures": false,
+        "editor.fontLigatures": false
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features",
+        "editor.fontLigatures": false
     },
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -84,6 +84,9 @@
     },
     "[ruby]": {
         "editor.defaultFormatter": "Shopify.ruby-lsp"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "workbench.editor.untitled.hint": "hidden",
     "docker.showStartPage": false,
