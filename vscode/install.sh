@@ -32,6 +32,7 @@ VSCODE_PACKAGES=(
   mohsen1.prettify-json
   esbenp.prettier-vscode
   rebornix.ruby
+  Shopify.ruby-lsp
   rust-lang.rust-analyzer
   shardulm94.trailing-spaces
   whatwedo.twig

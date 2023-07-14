@@ -82,6 +82,9 @@
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[ruby]": {
+        "editor.defaultFormatter": "Shopify.ruby-lsp"
+    },
     "workbench.editor.untitled.hint": "hidden",
     "docker.showStartPage": false,
     "editor.bracketPairColorization.enabled": true,
@@ -97,5 +100,22 @@
     "mesonbuild.configureOnOpen": false,
     "rust-analyzer.inlayHints.parameterHints.enable": false,
     "rust-analyzer.inlayHints.typeHints.enable": false,
-    "rust-analyzer.inlayHints.renderColons": false
+    "rust-analyzer.inlayHints.renderColons": false,
+    "rubyLsp.enableExperimentalFeatures": true,
+    "rubyLsp.enabledFeatures": {
+        "codeActions": true,
+        "diagnostics": true,
+        "documentHighlights": true,
+        "documentLink": true,
+        "documentSymbols": true,
+        "foldingRanges": true,
+        "formatting": true,
+        "hover": true,
+        "inlayHint": true,
+        "onTypeFormatting": true,
+        "selectionRanges": true,
+        "semanticHighlighting": true,
+        "completion": true,
+        "codeLens": true
+    }
 }
