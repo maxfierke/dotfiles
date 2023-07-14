@@ -13,6 +13,8 @@
     "editor.formatOnSave": false,
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.fontLigatures": true,
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.defaultProfile.linux": "zsh",
     "explorer.openEditors.visible": 0,
     "explorer.autoReveal": false,
     "editor.cursorBlinking": "solid",
