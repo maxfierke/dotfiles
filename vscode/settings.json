@@ -106,6 +106,8 @@
     "rust-analyzer.inlayHints.parameterHints.enable": false,
     "rust-analyzer.inlayHints.typeHints.enable": false,
     "rust-analyzer.inlayHints.renderColons": false,
+    "rust-analyzer.imports.granularity.group": "module",
+    "rust-analyzer.completion.callable.snippets": "none",
     "rubyLsp.enableExperimentalFeatures": true,
     "rubyLsp.enabledFeatures": {
         "codeActions": true,
