@@ -40,6 +40,7 @@ VSCODE_PACKAGES=(
   lifeart.vscode-ember-unstable
   dbaeumer.vscode-eslint
   dtsvet.vscode-wasm
+  secretlab.yarn-spinner
 )
 
 REMOVE_VSCODE_PACKAGES=(
