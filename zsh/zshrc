@@ -59,7 +59,7 @@ ZSH_CUSTOM="$DOTFILES_ROOT/zsh/oh-my-zsh"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git github bundler ssh-agent rake)
+plugins=(git gh bundler iterm2 jira ssh-agent rake rust)
 
 # Load homebrew ZSH completions
 if type brew &>/dev/null 2>&1; then
@@ -67,6 +67,11 @@ if type brew &>/dev/null 2>&1; then
 
   autoload -Uz compinit
   compinit
+fi
+
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  zstyle :omz:plugins:iterm2 shell-integration yes
+  zstyle :omz:plugins:ssh-agent ssh-add-args --apple-load-keychain
 fi
 
 source $ZSH/oh-my-zsh.sh
