@@ -52,14 +52,14 @@ if OS.mac?
   cask 'flux'
   cask 'font-fira-code' unless File.exist?(File.expand_path('~/Library/Fonts/FiraCode-Bold.otf'))
   cask 'docker'
-  cask 'firefox'
+  cask 'firefox' unless File.exist?('/Applications/Firefox.app')
   cask 'google-chrome' unless File.exist?('/Applications/Google Chrome.app')
   cask 'insomnia'
-  cask 'iterm2'
+  cask 'iterm2' unless File.exist?('/Applications/iTerm.app')
   cask 'postico'
   cask 'slack' unless File.exist?('/Applications/Slack.app')
   cask 'steam'
   cask 'tidal'
-  cask 'visual-studio-code'
+  cask 'visual-studio-code' unless File.exist?('/Application/Visual Studio Code.app')
   cask 'vlc'
 end
