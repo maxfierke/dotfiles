@@ -31,7 +31,6 @@ VSCODE_PACKAGES=(
   ricard.postcss
   mohsen1.prettify-json
   esbenp.prettier-vscode
-  rebornix.ruby
   Shopify.ruby-lsp
   rust-lang.rust-analyzer
   shardulm94.trailing-spaces
@@ -50,6 +49,7 @@ REMOVE_VSCODE_PACKAGES=(
   embertooling.emberjs
   felixbecker.php-pack
   PKief.material-icon-theme
+  rebornix.ruby
   rust-lang.rust
   monokai.theme-monokai-pro-vscode
   tberman.json-schema-validator
@@ -57,6 +57,7 @@ REMOVE_VSCODE_PACKAGES=(
   Equinusocio.vsc-material-theme
   embertooling.vscode-ember
   DSKWRK.vscode-generate-getter-setter
+  wingrunr21.vscode-ruby
 )
 
 INSTALLED_PACKAGES=( $(code --list-extensions) )
