@@ -60,6 +60,6 @@ if OS.mac?
   cask 'slack' unless File.exist?('/Applications/Slack.app')
   cask 'steam'
   cask 'tidal'
-  cask 'visual-studio-code' unless File.exist?('/Application/Visual Studio Code.app')
+  cask 'visual-studio-code' unless File.exist?('/Applications/Visual Studio Code.app')
   cask 'vlc'
 end
