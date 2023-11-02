@@ -90,7 +90,7 @@
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "workbench.editor.untitled.hint": "hidden",
+    "workbench.editor.empty.hint": "hidden",
     "docker.showStartPage": false,
     "editor.bracketPairColorization.enabled": true,
     "workbench.colorTheme": "One Monokai",
@@ -124,5 +124,7 @@
         "semanticHighlighting": true,
         "completion": true,
         "codeLens": true
-    }
+    },
+    "workbench.enableExperiments": false,
+    "workbench.settings.enableNaturalLanguageSearch": false
 }
