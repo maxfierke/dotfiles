@@ -126,5 +126,8 @@
         "codeLens": true
     },
     "workbench.enableExperiments": false,
-    "workbench.settings.enableNaturalLanguageSearch": false
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
