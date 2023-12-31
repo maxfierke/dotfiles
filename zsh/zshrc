@@ -101,6 +101,7 @@ export GPG_TTY=$(tty)
 
 [ -f "$DOTFILES_ROOT/zsh/env.sh" ] && source "$DOTFILES_ROOT/zsh/env.sh"
 [ -f "$DOTFILES_ROOT/zsh/aliases.sh" ] && source "$DOTFILES_ROOT/zsh/aliases.sh"
+[ -f "$DOTFILES_ROOT/zsh/asdf.sh" ] && source "$DOTFILES_ROOT/zsh/asdf.sh"
 
 # Theme stuff
 BULLETTRAIN_CONTEXT_SHOW=true
