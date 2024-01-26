@@ -61,6 +61,57 @@ return {
     },
   },
 
+  plugins = {
+    {
+      "nvim-treesitter",
+      opts = {
+        auto_install = true,
+        ensure_installed = {
+          "c",
+          "cmake",
+          "cpp",
+          "css",
+          "dart",
+          "devicetree",
+          "diff",
+          "dockerfile",
+          "dot",
+          "eex",
+          "elixir",
+          "erlang",
+          "gitignore",
+          "go",
+          "graphql",
+          "hcl",
+          "html",
+          "javascript",
+          "json",
+          "llvm",
+          "make",
+          "markdown",
+          "markdown_inline",
+          "meson",
+          "ninja",
+          "nix",
+          "php",
+          "proto",
+          "ron",
+          "rst",
+          "ruby",
+          "rust",
+          "scss",
+          "sql",
+          "toml",
+          "tsx",
+          "twig",
+          "typescript",
+          "yaml",
+          "zig"
+        },
+      }
+    }
+  },
+
   -- This function is run last and is a good place to configuring
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
