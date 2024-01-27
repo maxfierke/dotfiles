@@ -13,6 +13,10 @@
 # The default configuration, that can be overwrite in your .zshrc file
 # ------------------------------------------------------------------------------
 
+# This is a pretty heavily-modified fork of bullet-train at this point. I should
+# probably rename it
+# --Max
+
 VIRTUAL_ENV_DISABLE_PROMPT=true
 
 # Define order and content of prompt
@@ -23,7 +27,6 @@ if [ ! -n "${BULLETTRAIN_PROMPT_ORDER+1}" ]; then
     custom
     context
     dir
-    perl
     ruby
     virtualenv
     nvm
@@ -32,7 +35,6 @@ if [ ! -n "${BULLETTRAIN_PROMPT_ORDER+1}" ]; then
     elixir
     rust
     git
-    hg
     cmd_exec_time
   )
 fi
@@ -197,17 +199,6 @@ if [ ! -n "${BULLETTRAIN_GIT_EXTENDED+1}" ]; then
 fi
 if [ ! -n "${BULLETTRAIN_GIT_PROMPT_CMD+1}" ]; then
   BULLETTRAIN_GIT_PROMPT_CMD="\$(git_prompt_info)"
-fi
-
-# PERL
-if [ ! -n "${BULLETTRAIN_PERL_BG+1}" ]; then
-  BULLETTRAIN_PERL_BG=yellow
-fi
-if [ ! -n "${BULLETTRAIN_PERL_FG+1}" ]; then
-  BULLETTRAIN_PERL_FG=black
-fi
-if [ ! -n "${BULLETTRAIN_PERL_PREFIX+1}" ]; then
-  BULLETTRAIN_PERL_PREFIX=🐪
 fi
 
 # CONTEXT
@@ -417,41 +408,6 @@ prompt_git() {
   fi
 }
 
-prompt_hg() {
-  local rev status
-  if $(hg id >/dev/null 2>&1); then
-    if $(hg prompt >/dev/null 2>&1); then
-      if [[ $(hg prompt "{status|unknown}") = "?" ]]; then
-        # if files are not added
-        prompt_segment red white
-        st='±'
-      elif [[ -n $(hg prompt "{status|modified}") ]]; then
-        # if any modification
-        prompt_segment yellow black
-        st='±'
-      else
-        # if working copy is clean
-        prompt_segment green black
-      fi
-      echo -n $(hg prompt "☿ {rev}@{branch}") $st
-    else
-      st=""
-      rev=$(hg id -n 2>/dev/null | sed 's/[^-0-9]//g')
-      branch=$(hg id -b 2>/dev/null)
-      if $(hg st | grep -Eq "^\?"); then
-        prompt_segment red black
-        st='±'
-      elif $(hg st | grep -Eq "^(M|A)"); then
-        prompt_segment yellow black
-        st='±'
-      else
-        prompt_segment green black
-      fi
-      echo -n "☿ $rev@$branch" $st
-    fi
-  fi
-}
-
 # Dir: current working directory
 prompt_dir() {
   local dir=''
@@ -508,14 +464,6 @@ prompt_rust() {
 prompt_elixir() {
   if command -v elixir > /dev/null 2>&1; then
     prompt_segment $BULLETTRAIN_ELIXIR_BG $BULLETTRAIN_ELIXIR_FG $BULLETTRAIN_ELIXIR_PREFIX" $(elixir -v | tail -n 1 | awk '{print $2}')"
-  fi
-}
-
-# PERL
-# PLENV: shows current PERL version active in the shell
-prompt_perl() {
-  if command -v plenv > /dev/null 2>&1; then
-    prompt_segment $BULLETTRAIN_PERL_BG $BULLETTRAIN_PERL_FG $BULLETTRAIN_PERL_PREFIX" $(plenv version | sed -e 's/ (set.*$//')"
   fi
 }
 
