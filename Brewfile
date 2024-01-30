@@ -4,10 +4,10 @@ tap 'neovim/neovim'
 brew 'ack'
 brew 'autoconf'
 brew 'awscli'
-brew 'bash-completion'
 brew 'coreutils'
 brew 'curl'
 brew 'findutils'
+brew 'fzf'
 brew 'git'
 brew 'gnu-sed'
 brew 'gnu-tar'
@@ -20,6 +20,7 @@ brew 'pkg-config'
 brew 'pwgen'
 brew 'readline'
 brew 'tig'
+brew 'tree'
 brew 'wget'
 brew 'youtube-dl'
 brew 'zlib'
@@ -43,7 +44,6 @@ brew 'libpq', link: true, force: true, conflicts_with: ["postgresql"]
 
 ## php
 brew 're2c'
-
 
 if OS.mac?
   # Desktop apps
