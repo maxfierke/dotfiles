@@ -95,7 +95,7 @@
     "editor.bracketPairColorization.enabled": true,
     "workbench.colorTheme": "One Monokai",
     "workbench.preferredDarkColorTheme": "One Monokai",
-    "workbench.preferredLightColorTheme": "Solarized Light",
+    "workbench.preferredLightColorTheme": "One Monokai",
     "window.autoDetectColorScheme": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "git.autofetch": true,
