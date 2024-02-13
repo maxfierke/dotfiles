@@ -5,7 +5,6 @@ alias reload_shell="exec -l $SHELL"
 alias resolve_merge_conflicts="git diff --name-only --diff-filter=U | xargs code"
 alias respek="bundle exec rspec"
 alias rmc="resolve_merge_conflicts"
-alias ect="ember test -s --launch Chrome"
 alias got=git
 alias fix_enter="stty sane"
 alias fix_webcam="sudo killall VDCAssistant"
@@ -14,15 +13,6 @@ alias maps="telnet mapscii.me"
 if command -v nvim >/dev/null 2>&1; then
   alias vim="nvim"
 fi
-
-respawn_rabbitmq() {
-  until rabbitmqctl cluster_status; do
-    brew services restart rabbitmq
-    sleep 5
-  done
-
-  echo 'Success!'
-}
 
 dump_gnome_term_profile() {
   dconf dump /org/gnome/terminal/legacy/profiles:/ > $HOME/.dotfiles/gnome/gnome-terminal-profiles.dconf
