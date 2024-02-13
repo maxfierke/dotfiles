@@ -40,11 +40,11 @@ if command -v nvim > /dev/null 2>&1; then
     clangd
     # broken on arm64: crystalline
     elixirls
-    gopls
-    html
+    # crashing on linux: gopls
+    # crashing on linux: html
     ruby_ls
     rust_analyzer
-    tsserver
+    # crashing on linux: tsserver
     zls
   )
 
