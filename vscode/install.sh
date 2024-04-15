@@ -24,7 +24,7 @@ VSCODE_PACKAGES=(
   EditorConfig.EditorConfig
   codezombiech.gitignore
   eamodio.gitlens
-  # FAILING on arm64: ms-vscode.js-debug
+  ms-vscode.js-debug
   zhuangtongfa.material-theme
   azemoh.one-monokai
   xdebug.php-pack
@@ -39,6 +39,7 @@ VSCODE_PACKAGES=(
   lifeart.vscode-ember-unstable
   dbaeumer.vscode-eslint
   dtsvet.vscode-wasm
+  MS-vsliveshare.vsliveshare
   secretlab.yarn-spinner
 )
 
