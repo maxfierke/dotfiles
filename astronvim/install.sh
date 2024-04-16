@@ -11,7 +11,8 @@ fi
 
 if [ ! -d "$HOME/.config/nvim" ]; then
   step 'Installing AstroNvim for neovim'
-  git clone --depth 1 https://github.com/AstroNvim/AstroNvim.git ~/.config/nvim
+  git clone --depth 1 https://github.com/AstroNvim/template.git ~/.config/nvim
+  rm -rf ~/.config/nvim/.git
   nvim  --headless -c 'autocmd User LazyDone quitall'
   step_ok 'Installed'
 fi
