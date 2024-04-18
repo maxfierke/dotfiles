@@ -24,6 +24,7 @@ VSCODE_PACKAGES=(
   EditorConfig.EditorConfig
   codezombiech.gitignore
   eamodio.gitlens
+  golang.go
   ms-vscode.js-debug
   zhuangtongfa.material-theme
   azemoh.one-monokai
@@ -33,6 +34,7 @@ VSCODE_PACKAGES=(
   esbenp.prettier-vscode
   Shopify.ruby-lsp
   rust-lang.rust-analyzer
+  hashicorp.terraform
   shardulm94.trailing-spaces
   whatwedo.twig
   mjmcloug.vscode-elixir
