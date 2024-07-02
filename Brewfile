@@ -9,9 +9,9 @@ brew 'curl'
 brew 'findutils'
 brew 'fzf'
 brew 'git'
+brew 'glow'
 brew 'gnu-sed'
 brew 'gnu-tar'
-brew 'hub'
 brew 'imagemagick'
 brew 'jq'
 brew 'libpng'
@@ -58,7 +58,6 @@ if OS.mac?
   cask 'postico'
   cask 'slack' unless File.exist?('/Applications/Slack.app')
   cask 'steam'
-  cask 'tidal'
   cask 'visual-studio-code' unless File.exist?('/Applications/Visual Studio Code.app')
   cask 'vlc'
 end
