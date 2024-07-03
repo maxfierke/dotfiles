@@ -42,8 +42,7 @@ if command -v nvim > /dev/null 2>&1; then
   LSPS=(
     clangd
     # broken on arm64: crystalline
-    elixirls
-    # crashing on linux: gopls
+    gopls
     # crashing on linux: html
     ruby_ls
     rust_analyzer
@@ -58,6 +57,7 @@ if command -v nvim > /dev/null 2>&1; then
   done
 
   DEBUGGERS=(
+    go_delve
     ruby
   )
 
