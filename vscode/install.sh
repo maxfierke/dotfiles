@@ -16,35 +16,6 @@ fi
 mkdir -p "$CODE_USER_DIR"
 ln -sfv "$DOTFILES_ROOT/vscode/settings.json" "$CODE_USER_DIR/settings.json"
 
-VSCODE_PACKAGES=(
-  redhat.ansible
-  ms-vscode.cpptools
-  crystal-lang-tools.crystal-lang
-  plorefice.devicetree
-  EditorConfig.EditorConfig
-  codezombiech.gitignore
-  eamodio.gitlens
-  golang.go
-  ms-vscode.js-debug
-  zhuangtongfa.material-theme
-  azemoh.one-monokai
-  xdebug.php-pack
-  ricard.postcss
-  mohsen1.prettify-json
-  esbenp.prettier-vscode
-  Shopify.ruby-lsp
-  rust-lang.rust-analyzer
-  hashicorp.terraform
-  shardulm94.trailing-spaces
-  whatwedo.twig
-  mjmcloug.vscode-elixir
-  lifeart.vscode-ember-unstable
-  dbaeumer.vscode-eslint
-  dtsvet.vscode-wasm
-  MS-vsliveshare.vsliveshare
-  secretlab.yarn-spinner
-)
-
 REMOVE_VSCODE_PACKAGES=(
   haaaad.ansible
   stevejpurves.cucumber
@@ -74,13 +45,3 @@ if [ ! -z "$INSTALLED_PACKAGES" ]; then
     fi
   done
 fi
-
-for package in "${VSCODE_PACKAGES[@]}"; do
-  step "Installing vscode extension: '$package'"
-  if [ -z "$INSTALLED_PACKAGES" ] || [[ ! " ${INSTALLED_PACKAGES[@]} " =~ " ${package} " ]]; then
-    code --install-extension $package
-    step_ok "Installed"
-  else
-    step_skip "Already installed $package"
-  fi
-done
