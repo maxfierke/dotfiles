@@ -7,14 +7,20 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "One Dark",
+  "theme": "Nightfox",
   "assistant": {
     "enabled": false,
     "version": "1"
   },
   "auto_install_extensions": {
+    "git-firefly": true,
+    "make": true,
+    "nvim-nightfox": true,
     "pest": true,
-    "ruby": true
+    "php": true,
+    "ruby": true,
+    "sql": true,
+    "toml": true
   },
   "ui_font_size": 16,
   "buffer_font_size": 15,
@@ -28,7 +34,8 @@
     "inline_completion_provider": "none"
   },
   "file_types": {
-    "Ruby": ["Brewfile", "Gemfile", "..."]
+    "Ruby": ["Brewfile", "Gemfile"],
+    "YAML": ["Procfile"]
   },
   "languages": {
     "Go": {
