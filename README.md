@@ -3,7 +3,7 @@ DEE-to-the-OH-to-the-TEE-to-the-EFF-EYE-EL-EEE-ES
 
 ## Use
 
-These dotfiles are designed to be used alongside Mike McQuiad's [strap.sh](https://github.com/MikeMcQuaid/strap), but you can use it without too.
+These dotfiles are designed to be used alongside Mike McQuaid's [strap.sh](https://github.com/MikeMcQuaid/strap), but you can use it without too.
 
 1. Run `script/setup`
 2. Things will happen.
