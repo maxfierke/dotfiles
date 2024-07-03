@@ -60,4 +60,5 @@ if OS.mac?
   cask 'steam'
   cask 'visual-studio-code' unless File.exist?('/Applications/Visual Studio Code.app')
   cask 'vlc'
+  cask 'zed'
 end
