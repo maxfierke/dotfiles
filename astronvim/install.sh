@@ -22,9 +22,11 @@ if command -v cargo > /dev/null 2>&1; then
   cargo install tree-sitter-cli
 fi
 
-# Symlink the settings file
 mkdir -p "$HOME/.config/nvim/lua"
-ln -sfv "$DOTFILES_ROOT/astronvim/lua/user" "$HOME/.config/nvim/lua/user"
+if [ ! -L "$HOME/.config/nvim/lua/user" ] && [ ! -d "$HOME/.config/nvim/lua/user" ]; then
+  # Symlink the settings files
+  ln -sfv "$DOTFILES_ROOT/astronvim/lua/user" "$HOME/.config/nvim/lua/user"
+fi
 
 if command -v nvim > /dev/null 2>&1; then
   step 'Updating AstroNvim'
