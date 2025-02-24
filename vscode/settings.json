@@ -70,7 +70,6 @@
     "ruby.format": "rubocop",
     "ruby.useLanguageServer": true,
     "ruby.useBundler": true,
-    "go.formatTool": "goimports",
     "[handlebars]": {
         "editor.fontLigatures": false
     },
@@ -88,7 +87,8 @@
         "editor.defaultFormatter": "Shopify.ruby-lsp"
     },
     "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
     },
     "workbench.editor.empty.hint": "hidden",
     "docker.showStartPage": false,
@@ -132,5 +132,20 @@
     },
     "mesonbuild.downloadLanguageServer": true,
     "window.customTitleBarVisibility": "never",
-    "go.toolsManagement.autoUpdate": true
+    "go.toolsManagement.autoUpdate": true,
+    "cSpell.userWords": [
+        "indexability"
+    ],
+    "go.editorContextMenuCommands": {
+        "testFile": true,
+        "testPackage": true
+    },
+    "go.lintTool": "golangci-lint",
+    "go.survey.prompt": false,
+    "go.testTimeout": "60s",
+    "go.testExplorer.showDynamicSubtestsInEditor": true,
+    "go.showWelcome": false,
+    "opa.languageServers": [
+        "regal"
+    ]
 }
