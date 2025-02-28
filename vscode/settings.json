@@ -108,7 +108,6 @@
     "rust-analyzer.inlayHints.renderColons": false,
     "rust-analyzer.imports.granularity.group": "module",
     "rust-analyzer.completion.callable.snippets": "none",
-    "rubyLsp.enableExperimentalFeatures": true,
     "rubyLsp.enabledFeatures": {
         "codeActions": true,
         "diagnostics": true,
@@ -147,5 +146,8 @@
     "go.showWelcome": false,
     "opa.languageServers": [
         "regal"
-    ]
+    ],
+    "rubyLsp.featureFlags": {
+        "all": true
+    }
 }
