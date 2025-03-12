@@ -10,7 +10,7 @@
   "theme": "Nightfox",
   "assistant": {
     "enabled": false,
-    "version": "1"
+    "version": "2"
   },
   "auto_install_extensions": {
     "git-firefly": true,

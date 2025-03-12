@@ -56,7 +56,6 @@
         "editorSuggestWidget.highlightForeground": "#5C6BC0",
         "textLink.foreground": "#5C6BC0"
     },
-    "editor.disableTranslate3d": true,
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
     },
@@ -147,7 +146,15 @@
     "opa.languageServers": [
         "regal"
     ],
+    "workbench.startupEditor": "none",
+    "svelte.enable-ts-plugin": true,
+    "[svelte]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "rubyLsp.featureFlags": {
         "all": true
+    },
+    "gopls": {
+        "formatting.gofumpt": true
     }
 }
