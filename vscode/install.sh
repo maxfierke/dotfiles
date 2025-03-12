@@ -21,7 +21,11 @@ REMOVE_VSCODE_PACKAGES=(
   stevejpurves.cucumber
   msjsdiag.debugger-for-chrome
   embertooling.emberjs
+  phanitejakomaravolu.emberes6snippets
+  codezombiech.gitignore
+  mohsen1.prettify-json
   felixbecker.php-pack
+  ms-vscode.makefile-tools
   PKief.material-icon-theme
   rebornix.ruby
   rust-lang.rust
@@ -30,6 +34,8 @@ REMOVE_VSCODE_PACKAGES=(
   eg2.tslint
   Equinusocio.vsc-material-theme
   embertooling.vscode-ember
+  lifeart.vscode-ember-unstable
+  mjmcloug.vscode-elixir
   DSKWRK.vscode-generate-getter-setter
   wingrunr21.vscode-ruby
 )
