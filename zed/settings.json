@@ -17,7 +17,6 @@
     "make": true,
     "nvim-nightfox": true,
     "pest": true,
-    "php": true,
     "ruby": true,
     "sql": true,
     "toml": true

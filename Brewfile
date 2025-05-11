@@ -30,7 +30,6 @@ brew 'zlib'
 brew 'crystal' if OS.mac?
 
 # Package managers
-brew 'composer'
 brew 'yarn'
 
 # Development schtuff
@@ -42,15 +41,10 @@ brew 'forego'
 ## pg gem
 brew 'libpq', link: true, force: true, conflicts_with: ["postgresql"]
 
-## php
-brew 're2c'
-
 if OS.mac?
   # Desktop apps
   cask 'xquartz'
-  cask 'flux'
   cask 'font-fira-code' unless File.exist?(File.expand_path('~/Library/Fonts/FiraCode-Bold.otf'))
-  cask 'docker'
   cask 'firefox' unless File.exist?('/Applications/Firefox.app')
   cask 'google-chrome' unless File.exist?('/Applications/Google Chrome.app')
   cask 'insomnia'
@@ -76,7 +70,6 @@ vscode 'asabil.meson'
 vscode 'zhuangtongfa.material-theme'
 vscode 'azemoh.one-monokai'
 vscode 'pest.pest-ide-tools'
-vscode 'xdebug.php-pack'
 vscode 'ricard.postcss'
 vscode 'esbenp.prettier-vscode'
 vscode 'Shopify.ruby-lsp'

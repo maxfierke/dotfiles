@@ -25,6 +25,7 @@ REMOVE_VSCODE_PACKAGES=(
   codezombiech.gitignore
   mohsen1.prettify-json
   felixbecker.php-pack
+  xdebug.php-pack
   ms-vscode.makefile-tools
   PKief.material-icon-theme
   rebornix.ruby

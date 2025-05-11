@@ -93,7 +93,6 @@ return {
           "meson",
           "ninja",
           "nix",
-          "php",
           "proto",
           "ron",
           "rst",
