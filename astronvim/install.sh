@@ -13,7 +13,7 @@ if [ ! -d "$HOME/.config/nvim" ]; then
   step 'Installing AstroNvim for neovim'
   git clone --depth 1 https://github.com/AstroNvim/template.git ~/.config/nvim
   rm -rf ~/.config/nvim/.git
-  nvim  --headless -c 'autocmd User LazyDone quitall'
+  nvim  --headless +q
   step_ok 'Installed'
 fi
 
@@ -30,13 +30,13 @@ fi
 
 if command -v nvim > /dev/null 2>&1; then
   step 'Updating AstroNvim'
-  nvim --headless -c 'AstroUpdate' -c 'quitall'
-  nvim --headless -c 'AstroUpdatePackages' -c 'quitall'
-  nvim --headless -c 'Lazy check' -c 'Lazy sync' -c 'quitall'
+  nvim --headless +q -c 'AstroUpdate' -c 'quitall'
+  nvim --headless +q -c 'AstroMasonUpdateAll' -c 'quitall'
+  nvim --headless +q -c 'Lazy check' -c 'Lazy sync' -c 'quitall'
   step_ok 'Updated'
 
   step 'Update language parsers for nvim'
-  nvim --headless -c "TSUpdate all" -c 'quitall'
+  nvim --headless +q -c "TSUpdate all" -c 'quitall'
   step_ok 'Updated'
 
   LSPS=(
@@ -52,7 +52,7 @@ if command -v nvim > /dev/null 2>&1; then
 
   for lsp in "${LSPS[@]}"; do
     step "Installing LSP for nvim: '$lsp'"
-    nvim --headless -c "LspInstall $lsp" -c 'quitall'
+    nvim --headless +q -c "LspInstall $lsp" -c 'quitall'
     step_ok "Installed"
   done
 
@@ -63,7 +63,7 @@ if command -v nvim > /dev/null 2>&1; then
 
   for debugger in "${DEBUGGERS[@]}"; do
     step "Installing debugger for nvim: '$debugger'"
-    nvim --headless -c "DapInstall $debugger" -c 'quitall'
+    nvim --headless +q -c "DapInstall $debugger" -c 'quitall'
     step_ok "Installed"
   done
 fi
