@@ -33,6 +33,7 @@ REMOVE_VSCODE_PACKAGES=(
   monokai.theme-monokai-pro-vscode
   tberman.json-schema-validator
   eg2.tslint
+  whatwedo.twig
   Equinusocio.vsc-material-theme
   embertooling.vscode-ember
   lifeart.vscode-ember-unstable
