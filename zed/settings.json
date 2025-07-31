@@ -8,7 +8,7 @@
 // from the command palette or from `Zed` application menu.
 {
   "theme": "Nightfox",
-  "assistant": {
+  "agent": {
     "enabled": false,
     "version": "2"
   },
@@ -30,7 +30,7 @@
   },
   "features": {
     "copilot": false,
-    "inline_completion_provider": "none"
+    "edit_prediction_provider": "none"
   },
   "file_types": {
     "Ruby": ["Brewfile", "Gemfile"],
