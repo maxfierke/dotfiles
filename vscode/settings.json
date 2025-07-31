@@ -156,5 +156,8 @@
     },
     "gopls": {
         "formatting.gofumpt": true
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }
