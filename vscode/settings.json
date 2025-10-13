@@ -129,7 +129,6 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "mesonbuild.downloadLanguageServer": true,
-    "window.customTitleBarVisibility": "never",
     "go.toolsManagement.autoUpdate": true,
     "cSpell.userWords": [
         "indexability"
