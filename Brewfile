@@ -8,6 +8,7 @@ brew 'curl'
 brew 'findutils'
 brew 'fzf'
 brew 'git'
+brew 'git-delta'
 brew 'glow'
 brew 'gnu-sed'
 brew 'gnu-tar'
@@ -57,6 +58,7 @@ if OS.mac?
 end
 
 vscode 'redhat.ansible'
+vscode 'biomejs.biome'
 vscode 'ms-vscode.cpptools'
 vscode 'crystal-lang-tools.crystal-lang'
 vscode 'plorefice.devicetree'
