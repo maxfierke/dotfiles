@@ -159,7 +159,6 @@
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "chat.disableAIFeatures": true,
     "[dockercompose]": {
         "editor.insertSpaces": true,
         "editor.tabSize": 2,
@@ -168,5 +167,12 @@
     },
     "[github-actions-workflow]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
-    }
+    },
+    "chat.disableAIFeatures": true,
+    "window.titleBarStyle": "native",
+    "C_Cpp.clang_format_fallbackStyle": "Google",
+    "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyFunction": true,
+    "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyType": true,
+    "emulicious-debugger.emuliciousPath": "~/Games/Emulicious/Emulicious.jar",
+    "rubyLsp.addonSettings": {}
 }
