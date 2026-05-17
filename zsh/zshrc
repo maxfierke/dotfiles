@@ -116,5 +116,3 @@ BULLETTRAIN_GIT_COLORIZE_DIRTY=true
 # Machine-specific stuff
 [ -f $HOME/.env_secrets.sh ] && source $HOME/.env_secrets.sh
 [ -f $HOME/.mstrap/env.sh ] && source $HOME/.mstrap/env.sh
-
-[ -f $HOME/.chirpstrap/env.sh ] && source $HOME/.chirpstrap/env.sh
