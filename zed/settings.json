@@ -7,10 +7,12 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "edit_predictions": {
+    "provider": "none"
+  },
   "theme": "Nightfox",
   "agent": {
-    "enabled": false,
-    "version": "2"
+    "enabled": false
   },
   "auto_install_extensions": {
     "git-firefly": true,
@@ -29,8 +31,7 @@
     "share_on_join": false
   },
   "features": {
-    "copilot": false,
-    "edit_prediction_provider": "none"
+    "copilot": false
   },
   "file_types": {
     "Ruby": ["Brewfile", "Gemfile"],
