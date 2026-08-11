@@ -1,178 +1,201 @@
 {
-    "editor.fontFamily": "FiraCode-Retina, 'Fira Code Retina', 'Fira Code'",
-    "editor.fontWeight": "450",
-    "editor.fontSize": 14,
-    "editor.fontLigatures": true,
-    "editor.renderWhitespace": "all",
-    "editor.tabSize": 2,
-    "editor.rulers": [
-        80
-    ],
-    "editor.renderControlCharacters": true,
-    "editor.renderLineHighlight": "all",
-    "editor.formatOnSave": false,
-    "terminal.external.osxExec": "iTerm.app",
-    "terminal.integrated.fontLigatures": true,
-    "terminal.integrated.defaultProfile.osx": "zsh",
-    "terminal.integrated.defaultProfile.linux": "zsh",
-    "explorer.openEditors.visible": 0,
-    "explorer.autoReveal": false,
-    "editor.cursorBlinking": "solid",
-    "window.nativeTabs": true,
-    "workbench.editor.swipeToNavigate": true,
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/tmp/**": true,
-        "**/dist/**": true,
-        "**/node_modules/**": true,
-        "**/bower_components/**": true,
-        "**/bower_components.ember-try/**": true,
-        "**/node_modules.ember-try/**": true,
-        "**/*.retry": true
+  "[dockercompose]": {
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[go]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
     },
-    "files.watcherExclude": {
-        "**/.git/objects/**": true,
-        "**/tmp/**": true,
-        "**/dist/**": true,
-        "**/node_modules/**": true,
-        "**/bower_components/**": true,
-        "**/bower_components.ember-try/**": true,
-        "**/node_modules.ember-try/**": true
-    },
-    "files.associations": {
-        "*.fdoc": "yaml"
-    },
-    "workbench.iconTheme": "Monokai Pro (Filter Machine) Icons",
-    "workbench.colorCustomizations": {
-        "activityBarBadge.background": "#5C6BC0",
-        "list.activeSelectionForeground": "#5C6BC0",
-        "list.inactiveSelectionForeground": "#5C6BC0",
-        "list.highlightForeground": "#5C6BC0",
-        "scrollbarSlider.activeBackground": "#5C6BC050",
-        "editorSuggestWidget.highlightForeground": "#5C6BC0",
-        "textLink.foreground": "#5C6BC0"
-    },
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
-    "gitlens.historyExplorer.enabled": true,
-    "breadcrumbs.enabled": true,
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "prettier.eslintIntegration": true,
-    "telemetry.telemetryLevel": "off",
-    "js/ts.implicitProjectConfig.experimentalDecorators": true,
-    "ruby.format": "rubocop",
-    "ruby.useLanguageServer": true,
-    "ruby.useBundler": true,
-    "[handlebars]": {
-        "editor.fontLigatures": false
-    },
-    "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features",
-        "editor.fontLigatures": false
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[ruby]": {
-        "editor.defaultFormatter": "Shopify.ruby-lsp"
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "workbench.editor.empty.hint": "hidden",
-    "docker.showStartPage": false,
-    "editor.bracketPairColorization.enabled": true,
-    "workbench.colorTheme": "One Monokai",
-    "workbench.preferredDarkColorTheme": "One Monokai",
-    "workbench.preferredLightColorTheme": "One Monokai",
-    "window.autoDetectColorScheme": true,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "git.autofetch": true,
-    "git.confirmSync": false,
-    "redhat.telemetry.enabled": false,
-    "editor.guides.indentation": true,
-    "mesonbuild.configureOnOpen": false,
-    "rust-analyzer.inlayHints.parameterHints.enable": false,
-    "rust-analyzer.inlayHints.typeHints.enable": false,
-    "rust-analyzer.inlayHints.renderColons": false,
-    "rust-analyzer.imports.granularity.group": "module",
-    "rust-analyzer.completion.callable.snippets": "none",
-    "rubyLsp.enabledFeatures": {
-        "codeActions": true,
-        "diagnostics": true,
-        "documentHighlights": true,
-        "documentLink": true,
-        "documentSymbols": true,
-        "foldingRanges": true,
-        "formatting": true,
-        "hover": true,
-        "inlayHint": true,
-        "onTypeFormatting": true,
-        "selectionRanges": true,
-        "semanticHighlighting": true,
-        "completion": true,
-        "codeLens": true
-    },
-    "workbench.enableExperiments": false,
-    "workbench.settings.enableNaturalLanguageSearch": false,
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "mesonbuild.downloadLanguageServer": true,
-    "go.toolsManagement.autoUpdate": true,
-    "cSpell.userWords": [
-        "indexability"
-    ],
-    "go.editorContextMenuCommands": {
-        "testFile": true,
-        "testPackage": true
-    },
-    "go.lintTool": "golangci-lint",
-    "go.survey.prompt": false,
-    "go.testTimeout": "60s",
-    "go.testExplorer.showDynamicSubtestsInEditor": true,
-    "go.showWelcome": false,
-    "opa.languageServers": [
-        "regal"
-    ],
-    "workbench.startupEditor": "none",
-    "svelte.enable-ts-plugin": true,
-    "[svelte]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "rubyLsp.featureFlags": {
-        "all": true
-    },
-    "gopls": {
-        "formatting.gofumpt": true
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[dockercompose]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.autoIndent": "advanced",
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
-    "[github-actions-workflow]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
-    "chat.disableAIFeatures": true,
-    "window.titleBarStyle": "native",
-    "C_Cpp.clang_format_fallbackStyle": "Google",
-    "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyFunction": true,
-    "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyType": true,
-    "emulicious-debugger.emuliciousPath": "~/Games/Emulicious/Emulicious.jar",
-    "rubyLsp.addonSettings": {}
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.insertSpaces": false
+  },
+  "[handlebars]": {
+    "editor.fontLigatures": false
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.fontLigatures": false
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "breadcrumbs.enabled": true,
+  "C_Cpp.clang_format_fallbackStyle": "Google",
+  "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyFunction": true,
+  "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyType": true,
+  "chat.disableAIFeatures": true,
+  "cSpell.userWords": [
+    "indexability"
+  ],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "docker.showStartPage": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.cursorBlinking": "solid",
+  "editor.fontFamily": "FiraCode-Retina, 'Fira Code Retina', 'Fira Code'",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.fontWeight": "450",
+  "editor.formatOnSave": false,
+  "editor.guides.indentation": true,
+  "editor.renderControlCharacters": true,
+  "editor.renderLineHighlight": "all",
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [
+    80
+  ],
+  "editor.tabSize": 2,
+  "emulicious-debugger.emuliciousPath": "~/Games/Emulicious/Emulicious.jar",
+  "explorer.autoReveal": false,
+  "explorer.openEditors.visible": 0,
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/*.retry": true,
+    "**/bower_components.ember-try/**": true,
+    "**/bower_components/**": true,
+    "**/CVS": true,
+    "**/dist/**": true,
+    "**/node_modules.ember-try/**": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/bower_components.ember-try/**": true,
+    "**/bower_components/**": true,
+    "**/dist/**": true,
+    "**/node_modules.ember-try/**": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true
+  },
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.historyExplorer.enabled": true,
+  "go.editorContextMenuCommands": {
+    "testFile": true,
+    "testPackage": true
+  },
+  "go.lintTool": "golangci-lint-v2",
+  "go.showWelcome": false,
+  "go.survey.prompt": false,
+  "go.testExplorer.showDynamicSubtestsInEditor": true,
+  "go.testTimeout": "60s",
+  "go.toolsManagement.autoUpdate": true,
+  "gopls": {
+    "formatting.gofumpt": true
+  },
+  "js/ts.implicitProjectConfig.experimentalDecorators": true,
+  "json.schemaDownload.trustedDomains": {
+    "https://biomejs.dev": true,
+    "https://developer.microsoft.com/json-schemas/": true,
+    "https://json-schema.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://raw.githubusercontent.com/devcontainers/spec/": true,
+    "https://raw.githubusercontent.com/microsoft/vscode/": true,
+    "https://schemastore.azurewebsites.net/": true,
+    "https://www.schemastore.org/": true
+  },
+  "mesonbuild.configureOnOpen": false,
+  "mesonbuild.downloadLanguageServer": true,
+  "opa.languageServers": [
+    "regal"
+  ],
+  "prettier.eslintIntegration": true,
+  "redhat.telemetry.enabled": false,
+  "ruby.format": "rubocop",
+  "ruby.useBundler": true,
+  "ruby.useLanguageServer": true,
+  "rubyLsp.addonSettings": {},
+  "rubyLsp.enabledFeatures": {
+    "codeActions": true,
+    "codeLens": true,
+    "completion": true,
+    "diagnostics": true,
+    "documentHighlights": true,
+    "documentLink": true,
+    "documentSymbols": true,
+    "foldingRanges": true,
+    "formatting": true,
+    "hover": true,
+    "inlayHint": true,
+    "onTypeFormatting": true,
+    "selectionRanges": true,
+    "semanticHighlighting": true
+  },
+  "rubyLsp.featureFlags": {
+    "all": true
+  },
+  "rust-analyzer.completion.callable.snippets": "none",
+  "rust-analyzer.imports.granularity.group": "module",
+  "rust-analyzer.inlayHints.parameterHints.enable": false,
+  "rust-analyzer.inlayHints.renderColons": false,
+  "rust-analyzer.inlayHints.typeHints.enable": false,
+  "svelte.enable-ts-plugin": true,
+  "telemetry.telemetryLevel": "off",
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.fontLigatures": true,
+  "window.autoDetectColorScheme": true,
+  "workbench.colorCustomizations": {
+    "activityBarBadge.background": "#5C6BC0",
+    "editorSuggestWidget.highlightForeground": "#5C6BC0",
+    "list.activeSelectionForeground": "#5C6BC0",
+    "list.highlightForeground": "#5C6BC0",
+    "list.inactiveSelectionForeground": "#5C6BC0",
+    "scrollbarSlider.activeBackground": "#5C6BC050",
+    "textLink.foreground": "#5C6BC0"
+  },
+  "workbench.colorTheme": "One Monokai",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.editor.swipeToNavigate": true,
+  "workbench.enableExperiments": false,
+  "workbench.iconTheme": "Monokai Pro (Filter Machine) Icons",
+  "workbench.preferredDarkColorTheme": "One Monokai",
+  "workbench.preferredLightColorTheme": "One Monokai",
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "workbench.startupEditor": "none",
+  "yaml.disableSchemaDetection": [
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml"
+  ]
 }
