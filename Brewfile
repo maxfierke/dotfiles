@@ -19,10 +19,9 @@ brew 'openssl'
 brew 'pkg-config'
 brew 'pwgen'
 brew 'readline'
-brew 'tig'
+brew 'ripgrep'
 brew 'tree'
 brew 'wget'
-brew 'youtube-dl'
 brew 'zlib'
 
 # Language runtimes/compilers/version managers
@@ -52,6 +51,7 @@ if OS.mac?
   cask 'postico'
   cask 'slack' unless File.exist?('/Applications/Slack.app')
   cask 'steam'
+  cask 'sublime-text' unless File.exist?('/Applications/Sublime Text.app')
   cask 'visual-studio-code' unless File.exist?('/Applications/Visual Studio Code.app')
   cask 'vlc'
   cask 'zed'
