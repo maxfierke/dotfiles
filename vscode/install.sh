@@ -27,6 +27,7 @@ REMOVE_VSCODE_PACKAGES=(
   felixbecker.php-pack
   xdebug.php-pack
   ms-vscode.makefile-tools
+  asabil.meson
   PKief.material-icon-theme
   rebornix.ruby
   rust-lang.rust
